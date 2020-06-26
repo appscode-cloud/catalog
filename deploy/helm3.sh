@@ -63,11 +63,11 @@ PERCONA_XTRADB_VERSIONS=(
 )
 
 POSTGRES_VERSIONS=(
-    9.6
-    10.2
-    10.6
-    11.1
-    11.2
+    9.6-v1
+    10.2-v1
+    10.6-v1
+    11.1-v1
+    11.2-v1
 )
 
 OS=""
