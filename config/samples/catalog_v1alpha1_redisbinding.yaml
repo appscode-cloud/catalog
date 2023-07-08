@@ -1,0 +1,12 @@
+apiVersion: catalog.kubeware.dev/v1alpha1
+kind: RedisBinding
+metadata:
+  labels:
+    app.kubernetes.io/name: redisbinding
+    app.kubernetes.io/instance: redisbinding-sample
+    app.kubernetes.io/part-of: catalog
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: catalog
+  name: redisbinding-sample
+spec:
+  # TODO(user): Add fields here

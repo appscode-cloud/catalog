@@ -1,0 +1,12 @@
+apiVersion: catalog.kubeware.dev/v1alpha1
+kind: MySQLBinding
+metadata:
+  labels:
+    app.kubernetes.io/name: mysqlbinding
+    app.kubernetes.io/instance: mysqlbinding-sample
+    app.kubernetes.io/part-of: catalog
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: catalog
+  name: mysqlbinding-sample
+spec:
+  # TODO(user): Add fields here

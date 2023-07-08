@@ -1,0 +1,14 @@
+## Append samples of your project ##
+resources:
+- catalog_v1alpha1_elasticsearchbinding.yaml
+- catalog_v1alpha1_kafkabinding.yaml
+- catalog_v1alpha1_mariadbbinding.yaml
+- catalog_v1alpha1_memcachedbinding.yaml
+- catalog_v1alpha1_mongodbbinding.yaml
+- catalog_v1alpha1_mysqlbinding.yaml
+- catalog_v1alpha1_perconaxtradbbinding.yaml
+- catalog_v1alpha1_pgbouncerbinding.yaml
+- catalog_v1alpha1_postgresbinding.yaml
+- catalog_v1alpha1_proxysqlbinding.yaml
+- catalog_v1alpha1_redisbinding.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

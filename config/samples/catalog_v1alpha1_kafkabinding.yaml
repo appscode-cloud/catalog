@@ -1,0 +1,12 @@
+apiVersion: catalog.kubeware.dev/v1alpha1
+kind: KafkaBinding
+metadata:
+  labels:
+    app.kubernetes.io/name: kafkabinding
+    app.kubernetes.io/instance: kafkabinding-sample
+    app.kubernetes.io/part-of: catalog
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: catalog
+  name: kafkabinding-sample
+spec:
+  # TODO(user): Add fields here
