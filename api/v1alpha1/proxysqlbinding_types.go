@@ -18,24 +18,13 @@ package v1alpha1
 
 import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	kmapi "kmodules.xyz/client-go/api/v1"
 )
-
-// EDIT THIS FILE!  THIS IS SCAFFOLDING FOR YOU TO OWN!
-// NOTE: json tags are required.  Any new fields you add must have json tags for the fields to be serialized.
 
 // ProxySQLBindingSpec defines the desired state of ProxySQLBinding
 type ProxySQLBindingSpec struct {
-	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
-
-	// Foo is an example field of ProxySQLBinding. Edit proxysqlbinding_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
-}
-
-// ProxySQLBindingStatus defines the observed state of ProxySQLBinding
-type ProxySQLBindingStatus struct {
-	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
+	// SourceRef refers to the source app instance.
+	SourceRef kmapi.ObjectReference `json:"sourceRef"`
 }
 
 //+kubebuilder:object:root=true
@@ -46,8 +35,8 @@ type ProxySQLBinding struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
-	Spec   ProxySQLBindingSpec   `json:"spec,omitempty"`
-	Status ProxySQLBindingStatus `json:"status,omitempty"`
+	Spec   ProxySQLBindingSpec `json:"spec,omitempty"`
+	Status AppStatus           `json:"status,omitempty"`
 }
 
 //+kubebuilder:object:root=true

@@ -18,24 +18,13 @@ package v1alpha1
 
 import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	kmapi "kmodules.xyz/client-go/api/v1"
 )
-
-// EDIT THIS FILE!  THIS IS SCAFFOLDING FOR YOU TO OWN!
-// NOTE: json tags are required.  Any new fields you add must have json tags for the fields to be serialized.
 
 // PerconaXtraDBBindingSpec defines the desired state of PerconaXtraDBBinding
 type PerconaXtraDBBindingSpec struct {
-	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
-
-	// Foo is an example field of PerconaXtraDBBinding. Edit perconaxtradbbinding_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
-}
-
-// PerconaXtraDBBindingStatus defines the observed state of PerconaXtraDBBinding
-type PerconaXtraDBBindingStatus struct {
-	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
+	// SourceRef refers to the source app instance.
+	SourceRef kmapi.ObjectReference `json:"sourceRef"`
 }
 
 //+kubebuilder:object:root=true
@@ -46,8 +35,8 @@ type PerconaXtraDBBinding struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
-	Spec   PerconaXtraDBBindingSpec   `json:"spec,omitempty"`
-	Status PerconaXtraDBBindingStatus `json:"status,omitempty"`
+	Spec   PerconaXtraDBBindingSpec `json:"spec,omitempty"`
+	Status AppStatus                `json:"status,omitempty"`
 }
 
 //+kubebuilder:object:root=true
