@@ -28,6 +28,7 @@ type MongoDBBindingSpec struct {
 }
 
 //+kubebuilder:object:root=true
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 //+kubebuilder:subresource:status
 
 // MongoDBBinding is the Schema for the mongodbbindings API
@@ -36,10 +37,11 @@ type MongoDBBinding struct {
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
 	Spec   MongoDBBindingSpec `json:"spec,omitempty"`
-	Status AppStatus          `json:"status,omitempty"`
+	Status BindingStatus      `json:"status,omitempty"`
 }
 
 //+kubebuilder:object:root=true
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // MongoDBBindingList contains a list of MongoDBBinding
 type MongoDBBindingList struct {
@@ -50,4 +52,18 @@ type MongoDBBindingList struct {
 
 func init() {
 	SchemeBuilder.Register(&MongoDBBinding{}, &MongoDBBindingList{})
+}
+
+var _ BindingInterface = &MongoDBBinding{}
+
+func (in *MongoDBBinding) GetStatus() *BindingStatus {
+	return &in.Status
+}
+
+func (in *MongoDBBinding) GetConditions() kmapi.Conditions {
+	return in.Status.Conditions
+}
+
+func (in *MongoDBBinding) SetConditions(conditions kmapi.Conditions) {
+	in.Status.Conditions = conditions
 }

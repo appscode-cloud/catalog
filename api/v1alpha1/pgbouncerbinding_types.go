@@ -28,6 +28,7 @@ type PgBouncerBindingSpec struct {
 }
 
 //+kubebuilder:object:root=true
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 //+kubebuilder:subresource:status
 
 // PgBouncerBinding is the Schema for the pgbouncerbindings API
@@ -36,10 +37,11 @@ type PgBouncerBinding struct {
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
 	Spec   PgBouncerBindingSpec `json:"spec,omitempty"`
-	Status AppStatus            `json:"status,omitempty"`
+	Status BindingStatus        `json:"status,omitempty"`
 }
 
 //+kubebuilder:object:root=true
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // PgBouncerBindingList contains a list of PgBouncerBinding
 type PgBouncerBindingList struct {
@@ -50,4 +52,18 @@ type PgBouncerBindingList struct {
 
 func init() {
 	SchemeBuilder.Register(&PgBouncerBinding{}, &PgBouncerBindingList{})
+}
+
+var _ BindingInterface = &PgBouncerBinding{}
+
+func (in *PgBouncerBinding) GetStatus() *BindingStatus {
+	return &in.Status
+}
+
+func (in *PgBouncerBinding) GetConditions() kmapi.Conditions {
+	return in.Status.Conditions
+}
+
+func (in *PgBouncerBinding) SetConditions(conditions kmapi.Conditions) {
+	in.Status.Conditions = conditions
 }

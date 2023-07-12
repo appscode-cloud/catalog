@@ -28,6 +28,7 @@ type RedisBindingSpec struct {
 }
 
 //+kubebuilder:object:root=true
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 //+kubebuilder:subresource:status
 
 // RedisBinding is the Schema for the redisbindings API
@@ -36,10 +37,11 @@ type RedisBinding struct {
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
 	Spec   RedisBindingSpec `json:"spec,omitempty"`
-	Status AppStatus        `json:"status,omitempty"`
+	Status BindingStatus    `json:"status,omitempty"`
 }
 
 //+kubebuilder:object:root=true
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // RedisBindingList contains a list of RedisBinding
 type RedisBindingList struct {
@@ -50,4 +52,18 @@ type RedisBindingList struct {
 
 func init() {
 	SchemeBuilder.Register(&RedisBinding{}, &RedisBindingList{})
+}
+
+var _ BindingInterface = &RedisBinding{}
+
+func (in *RedisBinding) GetStatus() *BindingStatus {
+	return &in.Status
+}
+
+func (in *RedisBinding) GetConditions() kmapi.Conditions {
+	return in.Status.Conditions
+}
+
+func (in *RedisBinding) SetConditions(conditions kmapi.Conditions) {
+	in.Status.Conditions = conditions
 }

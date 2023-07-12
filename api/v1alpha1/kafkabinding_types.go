@@ -28,6 +28,7 @@ type KafkaBindingSpec struct {
 }
 
 //+kubebuilder:object:root=true
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 //+kubebuilder:subresource:status
 
 // KafkaBinding is the Schema for the kafkabindings API
@@ -36,10 +37,11 @@ type KafkaBinding struct {
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
 	Spec   KafkaBindingSpec `json:"spec,omitempty"`
-	Status AppStatus        `json:"status,omitempty"`
+	Status BindingStatus    `json:"status,omitempty"`
 }
 
 //+kubebuilder:object:root=true
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // KafkaBindingList contains a list of KafkaBinding
 type KafkaBindingList struct {
@@ -50,4 +52,18 @@ type KafkaBindingList struct {
 
 func init() {
 	SchemeBuilder.Register(&KafkaBinding{}, &KafkaBindingList{})
+}
+
+var _ BindingInterface = &KafkaBinding{}
+
+func (in *KafkaBinding) GetStatus() *BindingStatus {
+	return &in.Status
+}
+
+func (in *KafkaBinding) GetConditions() kmapi.Conditions {
+	return in.Status.Conditions
+}
+
+func (in *KafkaBinding) SetConditions(conditions kmapi.Conditions) {
+	in.Status.Conditions = conditions
 }
