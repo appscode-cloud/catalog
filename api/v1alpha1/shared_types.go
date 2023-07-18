@@ -19,159 +19,78 @@ package v1alpha1
 import (
 	"k8s.io/apimachinery/pkg/runtime"
 	kmapi "kmodules.xyz/client-go/api/v1"
+	"sigs.k8s.io/controller-runtime/pkg/client"
 )
 
-// AppConditionType is a type of condition for a route.
-type AppConditionType string
-
-// AppConditionReason is a reason for a route condition.
-type AppConditionReason string
+const (
+	BindingConditionTypeDBReady                  kmapi.ConditionType = "DBReady"
+	BindingConditionTypeVaultReady               kmapi.ConditionType = "VaultReady"
+	BindingConditionTypeServiceAccountReady      kmapi.ConditionType = "ServiceAccountReady"
+	BindingConditionTypeSecretEngineReady        kmapi.ConditionType = "SecretEngineReady"
+	BindingConditionTypeRoleReady                kmapi.ConditionType = "RoleReady"
+	BindingConditionTypeSecretAccessRequestReady kmapi.ConditionType = "SecretAccessRequestReady"
+)
 
 const (
-	// This condition indicates whether the route has been accepted or rejected
-	// by a Gateway, and why.
-	//
-	// Possible reasons for this condition to be true are:
-	//
-	// * "Accepted"
-	//
-	// Possible reasons for this condition to be False are:
-	//
-	// * "NoMatchingSource"
-	// * "UnsupportedValue"
-	//
-	// Possible reasons for this condition to be Unknown are:
-	//
-	// * "Pending"
-	//
-	// Controllers may raise this condition with other reasons,
-	// but should prefer to use the reasons listed above to improve
-	// interoperability.
-	AppConditionTypeSourceAccepted AppConditionType = "Accepted"
+	BindingConditionReasonDBNotCreated   = "DBNotCreated"
+	BindingConditionReasonDBProvisioning = "DBProvisioning"
 
-	// This reason is used with the "Accepted" condition when the App has been
-	// accepted by the Gateway.
-	AppConditionReasonSourceAccepted AppConditionReason = "Accepted"
+	BindingConditionReasonVaultNotCreated   = "VaultNotCreated"
+	BindingConditionReasonVaultProvisioning = "VaultProvisioning"
 
-	// This reason is used with the "Accepted" condition when there are
-	// no matching Sources. In the case of Gateways, this can occur when
-	// an App SourceRef specifies a Port and/or SectionName that does not
-	// match any Listeners in the Gateway.
+	BindingConditionReasonServiceAccountNotCreated = "ServiceAccountNotCreated"
 
-	// This reason is used with the "Accepted" condition when there are
-	// no matching Vault.
+	BindingConditionReasonSecretEngineNotCreated = "SecretEngineNotCreated"
+	BindingConditionReasonSecretEngineNotReady   = "SecretEngineNotReady"
 
-	AppConditionTypeFinalizerAdded          AppConditionType   = "FinalizerAdded"
-	AppConditionReasonPatchFinalizerFailed  AppConditionReason = "PatchFinalizerFailed"
-	AppConditionReasonPatchFinalizerSucceed AppConditionReason = "PatchFinalizerSucceed"
+	BindingConditionReasonRoleNotCreated = "RoleNotCreated"
+	BindingConditionReasonRoleNotReady   = "RoleNotReady"
 
-	AppConditionTypeVaultReady          AppConditionType   = "VaultReady"
-	AppConditionReasonVaultReady        AppConditionReason = "VaultReady"
-	AppConditionReasonVaultNotCreated   AppConditionReason = "VaultNotCreated"
-	AppConditionReasonVaultProvisioning AppConditionReason = "VaultProvisioning"
-
-	AppConditionTypeServiceAccountReady        AppConditionType   = "ServiceAccountReady"
-	AppConditionReasonServiceAccountNotCreated AppConditionReason = "ServiceAccountNotCreated"
-	AppConditionReasonServiceAccountReady      AppConditionReason = "ServiceAccountReady"
-
-	AppConditionTypeSecretEngineReady        AppConditionType   = "SecretEngineReady"
-	AppConditionReasonSecretEngineReady      AppConditionReason = "SecretEngineReady"
-	AppConditionReasonSecretEngineNotReady   AppConditionReason = "SecretEngineNotReady"
-	AppConditionReasonSecretEngineNotCreated AppConditionReason = "SecretEngineNotCreated"
-
-	AppConditionTypeRoleReady      AppConditionReason = "RoleReady"
-	AppConditionReasonRoleNotReady AppConditionReason = "RoleNotReady"
-	AppConditionReasonRoleReady    AppConditionReason = "RoleReady"
-
-	AppConditionTypeSecretAccessRequestReady      AppConditionType   = "SecretAccessRequestReady"
-	AppConditionReasonSecretAccessRequestNotReady AppConditionReason = "SecretAccessRequestNotReady"
-	AppConditionReasonSecretAccessRequestExpired  AppConditionReason = "SecretRequestExpired"
-	AppConditionReasonSecretAccessRequestApproved AppConditionReason = "SecretRequestApproved"
-
-	// This reason is used with the "Accepted" condition when a value for an Enum
-	// is not recognized.
-	AppReasonUnsupportedValue AppConditionReason = "UnsupportedValue"
-
-	// This reason is used with the "Accepted" when a controller has not yet
-	// reconciled the route.
-	AppReasonPending AppConditionReason = "Pending"
-
-	// This condition indicates whether the controller was able to resolve all
-	// the object references for the App.
-	//
-	// Possible reasons for this condition to be true are:
-	//
-	// * "ResolvedRefs"
-	//
-	// Possible reasons for this condition to be false are:
-	//
-	// * "RefNotPermitted"
-	// * "InvalidKind"
-	//
-	// Controllers may raise this condition with other reasons,
-	// but should prefer to use the reasons listed above to improve
-	// interoperability.
-	AppConditionResolvedRefs AppConditionType = "ResolvedRefs"
-
-	// This reason is used with the "ResolvedRefs" condition when the condition
-	// is true.
-	AppReasonResolvedRefs AppConditionReason = "ResolvedRefs"
-
-	// This reason is used with the "ResolvedRefs" condition when
-	// one of the Listener's Apps has a BackendRef to an object in
-	// another namespace, where the object in the other namespace does
-	// not have a ReferenceGrant explicitly allowing the reference.
-	AppReasonRefNotPermitted AppConditionReason = "RefNotPermitted"
-
-	// This reason is used with the "ResolvedRefs" condition when
-	// one of the App's rules has a reference to an unknown or unsupported
-	// Group and/or Kind.
-	AppReasonInvalidKind AppConditionReason = "InvalidKind"
+	BindingConditionReasonSecretAccessRequestNotCreated = "SecretAccessRequestNotCreated"
+	BindingConditionReasonSecretAccessRequestNotReady   = "SecretAccessRequestNotReady"
+	BindingConditionReasonSecretAccessRequestExpired    = "SecretAccessRequestExpired"
+	BindingConditionReasonSecretAccessRequestApproved   = "SecretAccessRequestApproved"
+	BindingConditionReasonSecretAccessRequestDenied     = "SecretAccessRequestDenied"
 )
 
 // +kubebuilder:validation:Enum=Pending;InProgress;Terminating;Current;Failed;Expired
-type AppPhase string
+type BindingPhase string
 
 const (
-	AppPhasePending     AppPhase = "Pending"
-	AppPhaseInProgress  AppPhase = "InProgress"
-	AppPhaseTerminating AppPhase = "Terminating"
-	AppPhaseCurrent     AppPhase = "Current"
-	AppPhaseFailed      AppPhase = "Failed"
-	AppPhaseExpired     AppPhase = "Expired"
+	BindingPhasePending     BindingPhase = "Pending"
+	BindingPhaseInProgress  BindingPhase = "InProgress"
+	BindingPhaseTerminating BindingPhase = "Terminating"
+	BindingPhaseCurrent     BindingPhase = "Current"
+	BindingPhaseFailed      BindingPhase = "Failed"
+	BindingPhaseExpired     BindingPhase = "Expired"
 )
 
-/*Pending : If MongoDB / VaultServer not found
+/*Pending : If DB / VaultServer not found
 InProgress: If role or accessReq is not ensured yet. Or their phase is not determined yet
 Current: all ok, secret is valid
 Expired: all ok, secret is expired
 Failed: role or accessReq failed for some reason*/
 
-// AppStatus defines the observed state of App
-type AppStatus struct {
-	// Conditions describe the current conditions of the Gateway.
-	//
-	// Implementations should prefer to express Gateway conditions
-	// using the `GatewayConditionType` and `GatewayConditionReason`
-	// constants so that operators and tools can converge on a common
-	// vocabulary to describe Gateway state.
-	//
-	// Known condition types are:
-	//
-	// * "Accepted"
-	// * "Ready"
-	//
+// BindingStatus defines the observed state of App
+type BindingStatus struct {
 	// +optional
 	// +listType=map
 	// +listMapKey=type
 	// +kubebuilder:validation:MaxItems=8
-	// +kubebuilder:default={{type: "Accepted", status: "Unknown", reason:"Pending", message:"Waiting for controller", lastTransitionTime: "1970-01-01T00:00:00Z"},{type: "Programmed", status: "Unknown", reason:"Pending", message:"Waiting for controller", lastTransitionTime: "1970-01-01T00:00:00Z"}}
 	Conditions []kmapi.Condition `json:"conditions,omitempty"`
 
 	// Specifies the current phase of the App
 	// +optional
-	Phase AppPhase `json:"phase,omitempty"`
+	Phase BindingPhase `json:"phase,omitempty"`
 
 	// +optional
 	Source *runtime.RawExtension `json:"source,omitempty"`
+}
+
+// +k8s:deepcopy-gen=false
+type BindingInterface interface {
+	client.Object
+	GetStatus() *BindingStatus
+	GetConditions() kmapi.Conditions
+	SetConditions(conditions kmapi.Conditions)
 }

@@ -28,6 +28,7 @@ type PerconaXtraDBBindingSpec struct {
 }
 
 //+kubebuilder:object:root=true
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 //+kubebuilder:subresource:status
 
 // PerconaXtraDBBinding is the Schema for the perconaxtradbbindings API
@@ -36,10 +37,11 @@ type PerconaXtraDBBinding struct {
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
 	Spec   PerconaXtraDBBindingSpec `json:"spec,omitempty"`
-	Status AppStatus                `json:"status,omitempty"`
+	Status BindingStatus            `json:"status,omitempty"`
 }
 
 //+kubebuilder:object:root=true
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // PerconaXtraDBBindingList contains a list of PerconaXtraDBBinding
 type PerconaXtraDBBindingList struct {
@@ -50,4 +52,18 @@ type PerconaXtraDBBindingList struct {
 
 func init() {
 	SchemeBuilder.Register(&PerconaXtraDBBinding{}, &PerconaXtraDBBindingList{})
+}
+
+var _ BindingInterface = &PerconaXtraDBBinding{}
+
+func (in *PerconaXtraDBBinding) GetStatus() *BindingStatus {
+	return &in.Status
+}
+
+func (in *PerconaXtraDBBinding) GetConditions() kmapi.Conditions {
+	return in.Status.Conditions
+}
+
+func (in *PerconaXtraDBBinding) SetConditions(conditions kmapi.Conditions) {
+	in.Status.Conditions = conditions
 }

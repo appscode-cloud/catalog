@@ -28,6 +28,7 @@ type MySQLBindingSpec struct {
 }
 
 //+kubebuilder:object:root=true
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 //+kubebuilder:subresource:status
 
 // MySQLBinding is the Schema for the mysqlbindings API
@@ -36,10 +37,11 @@ type MySQLBinding struct {
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
 	Spec   MySQLBindingSpec `json:"spec,omitempty"`
-	Status AppStatus        `json:"status,omitempty"`
+	Status BindingStatus    `json:"status,omitempty"`
 }
 
 //+kubebuilder:object:root=true
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // MySQLBindingList contains a list of MySQLBinding
 type MySQLBindingList struct {
@@ -50,4 +52,18 @@ type MySQLBindingList struct {
 
 func init() {
 	SchemeBuilder.Register(&MySQLBinding{}, &MySQLBindingList{})
+}
+
+var _ BindingInterface = &MySQLBinding{}
+
+func (in *MySQLBinding) GetStatus() *BindingStatus {
+	return &in.Status
+}
+
+func (in *MySQLBinding) GetConditions() kmapi.Conditions {
+	return in.Status.Conditions
+}
+
+func (in *MySQLBinding) SetConditions(conditions kmapi.Conditions) {
+	in.Status.Conditions = conditions
 }

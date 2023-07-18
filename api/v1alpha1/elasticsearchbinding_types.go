@@ -28,6 +28,7 @@ type ElasticsearchBindingSpec struct {
 }
 
 //+kubebuilder:object:root=true
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 //+kubebuilder:subresource:status
 
 // ElasticsearchBinding is the Schema for the elasticsearchbindings API
@@ -36,10 +37,11 @@ type ElasticsearchBinding struct {
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
 	Spec   ElasticsearchBindingSpec `json:"spec,omitempty"`
-	Status AppStatus                `json:"status,omitempty"`
+	Status BindingStatus            `json:"status,omitempty"`
 }
 
 //+kubebuilder:object:root=true
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // ElasticsearchBindingList contains a list of ElasticsearchBinding
 type ElasticsearchBindingList struct {
@@ -50,4 +52,18 @@ type ElasticsearchBindingList struct {
 
 func init() {
 	SchemeBuilder.Register(&ElasticsearchBinding{}, &ElasticsearchBindingList{})
+}
+
+var _ BindingInterface = &ElasticsearchBinding{}
+
+func (in *ElasticsearchBinding) GetStatus() *BindingStatus {
+	return &in.Status
+}
+
+func (in *ElasticsearchBinding) GetConditions() kmapi.Conditions {
+	return in.Status.Conditions
+}
+
+func (in *ElasticsearchBinding) SetConditions(conditions kmapi.Conditions) {
+	in.Status.Conditions = conditions
 }
