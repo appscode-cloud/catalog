@@ -8,13 +8,31 @@ metadata:
 spec:
   group: catalog.kubeware.dev
   names:
+    categories:
+    - kubeware
+    - datastore
+    - kubedb
+    - appscode
     kind: RedisBinding
     listKind: RedisBindingList
     plural: redisbindings
     singular: redisbinding
   scope: Namespaced
   versions:
-  - name: v1alpha1
+  - additionalPrinterColumns:
+    - jsonPath: .spec.sourceRef.namespace
+      name: Src_NS
+      type: string
+    - jsonPath: .spec.sourceRef.name
+      name: Src_Name
+      type: string
+    - jsonPath: .status.phase
+      name: Status
+      type: string
+    - jsonPath: .metadata.creationTimestamp
+      name: Age
+      type: date
+    name: v1alpha1
     schema:
       openAPIV3Schema:
         description: RedisBinding is the Schema for the redisbindings API

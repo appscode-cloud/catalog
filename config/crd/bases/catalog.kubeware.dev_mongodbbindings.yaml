@@ -8,13 +8,31 @@ metadata:
 spec:
   group: catalog.kubeware.dev
   names:
+    categories:
+    - kubeware
+    - datastore
+    - kubedb
+    - appscode
     kind: MongoDBBinding
     listKind: MongoDBBindingList
     plural: mongodbbindings
     singular: mongodbbinding
   scope: Namespaced
   versions:
-  - name: v1alpha1
+  - additionalPrinterColumns:
+    - jsonPath: .spec.sourceRef.namespace
+      name: Src_NS
+      type: string
+    - jsonPath: .spec.sourceRef.name
+      name: Src_Name
+      type: string
+    - jsonPath: .status.phase
+      name: Status
+      type: string
+    - jsonPath: .metadata.creationTimestamp
+      name: Age
+      type: date
+    name: v1alpha1
     schema:
       openAPIV3Schema:
         description: MongoDBBinding is the Schema for the mongodbbindings API
