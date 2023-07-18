@@ -28,6 +28,7 @@ type MariaDBBindingSpec struct {
 }
 
 //+kubebuilder:object:root=true
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 //+kubebuilder:subresource:status
 
 // MariaDBBinding is the Schema for the mariadbbindings API
@@ -36,10 +37,11 @@ type MariaDBBinding struct {
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
 	Spec   MariaDBBindingSpec `json:"spec,omitempty"`
-	Status AppStatus          `json:"status,omitempty"`
+	Status BindingStatus      `json:"status,omitempty"`
 }
 
 //+kubebuilder:object:root=true
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // MariaDBBindingList contains a list of MariaDBBinding
 type MariaDBBindingList struct {
@@ -50,4 +52,18 @@ type MariaDBBindingList struct {
 
 func init() {
 	SchemeBuilder.Register(&MariaDBBinding{}, &MariaDBBindingList{})
+}
+
+var _ BindingInterface = &MariaDBBinding{}
+
+func (in *MariaDBBinding) GetStatus() *BindingStatus {
+	return &in.Status
+}
+
+func (in *MariaDBBinding) GetConditions() kmapi.Conditions {
+	return in.Status.Conditions
+}
+
+func (in *MariaDBBinding) SetConditions(conditions kmapi.Conditions) {
+	in.Status.Conditions = conditions
 }

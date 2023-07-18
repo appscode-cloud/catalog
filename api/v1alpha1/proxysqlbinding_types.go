@@ -28,6 +28,7 @@ type ProxySQLBindingSpec struct {
 }
 
 //+kubebuilder:object:root=true
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 //+kubebuilder:subresource:status
 
 // ProxySQLBinding is the Schema for the proxysqlbindings API
@@ -36,10 +37,11 @@ type ProxySQLBinding struct {
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
 	Spec   ProxySQLBindingSpec `json:"spec,omitempty"`
-	Status AppStatus           `json:"status,omitempty"`
+	Status BindingStatus       `json:"status,omitempty"`
 }
 
 //+kubebuilder:object:root=true
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // ProxySQLBindingList contains a list of ProxySQLBinding
 type ProxySQLBindingList struct {
@@ -50,4 +52,18 @@ type ProxySQLBindingList struct {
 
 func init() {
 	SchemeBuilder.Register(&ProxySQLBinding{}, &ProxySQLBindingList{})
+}
+
+var _ BindingInterface = &ProxySQLBinding{}
+
+func (in *ProxySQLBinding) GetStatus() *BindingStatus {
+	return &in.Status
+}
+
+func (in *ProxySQLBinding) GetConditions() kmapi.Conditions {
+	return in.Status.Conditions
+}
+
+func (in *ProxySQLBinding) SetConditions(conditions kmapi.Conditions) {
+	in.Status.Conditions = conditions
 }

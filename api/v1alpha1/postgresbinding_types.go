@@ -28,6 +28,7 @@ type PostgresBindingSpec struct {
 }
 
 //+kubebuilder:object:root=true
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 //+kubebuilder:subresource:status
 
 // PostgresBinding is the Schema for the postgresbindings API
@@ -36,10 +37,11 @@ type PostgresBinding struct {
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
 	Spec   PostgresBindingSpec `json:"spec,omitempty"`
-	Status AppStatus           `json:"status,omitempty"`
+	Status BindingStatus       `json:"status,omitempty"`
 }
 
 //+kubebuilder:object:root=true
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // PostgresBindingList contains a list of PostgresBinding
 type PostgresBindingList struct {
@@ -50,4 +52,18 @@ type PostgresBindingList struct {
 
 func init() {
 	SchemeBuilder.Register(&PostgresBinding{}, &PostgresBindingList{})
+}
+
+var _ BindingInterface = &PostgresBinding{}
+
+func (in *PostgresBinding) GetStatus() *BindingStatus {
+	return &in.Status
+}
+
+func (in *PostgresBinding) GetConditions() kmapi.Conditions {
+	return in.Status.Conditions
+}
+
+func (in *PostgresBinding) SetConditions(conditions kmapi.Conditions) {
+	in.Status.Conditions = conditions
 }
