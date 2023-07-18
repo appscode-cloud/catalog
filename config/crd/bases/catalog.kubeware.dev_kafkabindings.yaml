@@ -20,11 +20,11 @@ spec:
   scope: Namespaced
   versions:
   - additionalPrinterColumns:
-    - jsonPath: .spec.sourceRef.name
-      name: Source_Name
-      type: string
     - jsonPath: .spec.sourceRef.namespace
-      name: Source_Namespace
+      name: Src_NS
+      type: string
+    - jsonPath: .spec.sourceRef.name
+      name: Src_Name
       type: string
     - jsonPath: .status.phase
       name: Status
