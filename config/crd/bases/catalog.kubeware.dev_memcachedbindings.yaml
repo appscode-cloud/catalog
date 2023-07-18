@@ -16,8 +16,6 @@ spec:
     kind: MemcachedBinding
     listKind: MemcachedBindingList
     plural: memcachedbindings
-    shortNames:
-    - mcbind
     singular: memcachedbinding
   scope: Namespaced
   versions:

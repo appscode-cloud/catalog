@@ -16,8 +16,6 @@ spec:
     kind: PgBouncerBinding
     listKind: PgBouncerBindingList
     plural: pgbouncerbindings
-    shortNames:
-    - pbbind
     singular: pgbouncerbinding
   scope: Namespaced
   versions:

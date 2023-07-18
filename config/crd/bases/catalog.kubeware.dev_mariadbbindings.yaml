@@ -16,8 +16,6 @@ spec:
     kind: MariaDBBinding
     listKind: MariaDBBindingList
     plural: mariadbbindings
-    shortNames:
-    - mdbind
     singular: mariadbbinding
   scope: Namespaced
   versions:

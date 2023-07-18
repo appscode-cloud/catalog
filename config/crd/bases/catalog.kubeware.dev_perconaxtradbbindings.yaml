@@ -16,8 +16,6 @@ spec:
     kind: PerconaXtraDBBinding
     listKind: PerconaXtraDBBindingList
     plural: perconaxtradbbindings
-    shortNames:
-    - pxbind
     singular: perconaxtradbbinding
   scope: Namespaced
   versions:

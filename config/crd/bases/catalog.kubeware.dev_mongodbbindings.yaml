@@ -16,8 +16,6 @@ spec:
     kind: MongoDBBinding
     listKind: MongoDBBindingList
     plural: mongodbbindings
-    shortNames:
-    - mgbind
     singular: mongodbbinding
   scope: Namespaced
   versions:

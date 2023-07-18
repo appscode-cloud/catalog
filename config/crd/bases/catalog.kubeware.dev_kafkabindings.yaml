@@ -16,8 +16,6 @@ spec:
     kind: KafkaBinding
     listKind: KafkaBindingList
     plural: kafkabindings
-    shortNames:
-    - kfbind
     singular: kafkabinding
   scope: Namespaced
   versions:

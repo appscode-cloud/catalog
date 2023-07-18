@@ -16,8 +16,6 @@ spec:
     kind: PostgresBinding
     listKind: PostgresBindingList
     plural: postgresbindings
-    shortNames:
-    - pgbind
     singular: postgresbinding
   scope: Namespaced
   versions:

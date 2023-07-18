@@ -16,8 +16,6 @@ spec:
     kind: ElasticsearchBinding
     listKind: ElasticsearchBindingList
     plural: elasticsearchbindings
-    shortNames:
-    - esbind
     singular: elasticsearchbinding
   scope: Namespaced
   versions:

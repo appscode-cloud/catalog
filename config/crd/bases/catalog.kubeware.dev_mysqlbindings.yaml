@@ -16,8 +16,6 @@ spec:
     kind: MySQLBinding
     listKind: MySQLBindingList
     plural: mysqlbindings
-    shortNames:
-    - mybind
     singular: mysqlbinding
   scope: Namespaced
   versions:

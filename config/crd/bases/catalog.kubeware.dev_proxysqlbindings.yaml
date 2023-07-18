@@ -16,8 +16,6 @@ spec:
     kind: ProxySQLBinding
     listKind: ProxySQLBindingList
     plural: proxysqlbindings
-    shortNames:
-    - prxbind
     singular: proxysqlbinding
   scope: Namespaced
   versions:

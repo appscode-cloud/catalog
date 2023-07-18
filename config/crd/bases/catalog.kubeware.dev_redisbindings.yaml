@@ -16,8 +16,6 @@ spec:
     kind: RedisBinding
     listKind: RedisBindingList
     plural: redisbindings
-    shortNames:
-    - rdbind
     singular: redisbinding
   scope: Namespaced
   versions:
