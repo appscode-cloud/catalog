@@ -8,13 +8,31 @@ metadata:
 spec:
   group: catalog.kubeware.dev
   names:
+    categories:
+    - kubeware
+    - datastore
+    - kubedb
+    - appscode
     kind: MemcachedBinding
     listKind: MemcachedBindingList
     plural: memcachedbindings
     singular: memcachedbinding
   scope: Namespaced
   versions:
-  - name: v1alpha1
+  - additionalPrinterColumns:
+    - jsonPath: .spec.sourceRef.namespace
+      name: Src_NS
+      type: string
+    - jsonPath: .spec.sourceRef.name
+      name: Src_Name
+      type: string
+    - jsonPath: .status.phase
+      name: Status
+      type: string
+    - jsonPath: .metadata.creationTimestamp
+      name: Age
+      type: date
+    name: v1alpha1
     schema:
       openAPIV3Schema:
         description: MemcachedBinding is the Schema for the memcachedbindings API

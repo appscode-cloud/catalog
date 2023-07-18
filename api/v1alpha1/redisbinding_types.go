@@ -30,6 +30,11 @@ type RedisBindingSpec struct {
 //+kubebuilder:object:root=true
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 //+kubebuilder:subresource:status
+// +kubebuilder:resource:categories={kubeware,datastore,kubedb,appscode}
+// +kubebuilder:printcolumn:name="Src_NS",type="string",JSONPath=".spec.sourceRef.namespace"
+// +kubebuilder:printcolumn:name="Src_Name",type="string",JSONPath=".spec.sourceRef.name"
+// +kubebuilder:printcolumn:name="Status",type="string",JSONPath=".status.phase"
+// +kubebuilder:printcolumn:name="Age",type="date",JSONPath=".metadata.creationTimestamp"
 
 // RedisBinding is the Schema for the redisbindings API
 type RedisBinding struct {
