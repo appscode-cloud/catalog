@@ -8,13 +8,33 @@ metadata:
 spec:
   group: catalog.kubeware.dev
   names:
+    categories:
+    - kubeware
+    - datastore
+    - kubedb
+    - appscode
     kind: ProxySQLBinding
     listKind: ProxySQLBindingList
     plural: proxysqlbindings
+    shortNames:
+    - prxbind
     singular: proxysqlbinding
   scope: Namespaced
   versions:
-  - name: v1alpha1
+  - additionalPrinterColumns:
+    - jsonPath: .spec.sourceRef.name
+      name: Source_Name
+      type: string
+    - jsonPath: .spec.sourceRef.namespace
+      name: Source_Namespace
+      type: string
+    - jsonPath: .status.phase
+      name: Status
+      type: string
+    - jsonPath: .metadata.creationTimestamp
+      name: Age
+      type: date
+    name: v1alpha1
     schema:
       openAPIV3Schema:
         description: ProxySQLBinding is the Schema for the proxysqlbindings API

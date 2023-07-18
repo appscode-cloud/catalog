@@ -30,6 +30,11 @@ type ProxySQLBindingSpec struct {
 //+kubebuilder:object:root=true
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 //+kubebuilder:subresource:status
+// +kubebuilder:resource:path=proxysqlbindings,singular=proxysqlbinding,shortName=prxbind,categories={kubeware,datastore,kubedb,appscode}
+// +kubebuilder:printcolumn:name="Source_Name",type="string",JSONPath=".spec.sourceRef.name"
+// +kubebuilder:printcolumn:name="Source_Namespace",type="string",JSONPath=".spec.sourceRef.namespace"
+// +kubebuilder:printcolumn:name="Status",type="string",JSONPath=".status.phase"
+// +kubebuilder:printcolumn:name="Age",type="date",JSONPath=".metadata.creationTimestamp"
 
 // ProxySQLBinding is the Schema for the proxysqlbindings API
 type ProxySQLBinding struct {

@@ -8,13 +8,33 @@ metadata:
 spec:
   group: catalog.kubeware.dev
   names:
+    categories:
+    - kubeware
+    - datastore
+    - kubedb
+    - appscode
     kind: ElasticsearchBinding
     listKind: ElasticsearchBindingList
     plural: elasticsearchbindings
+    shortNames:
+    - esbind
     singular: elasticsearchbinding
   scope: Namespaced
   versions:
-  - name: v1alpha1
+  - additionalPrinterColumns:
+    - jsonPath: .spec.sourceRef.name
+      name: Source_Name
+      type: string
+    - jsonPath: .spec.sourceRef.namespace
+      name: Source_Namespace
+      type: string
+    - jsonPath: .status.phase
+      name: Status
+      type: string
+    - jsonPath: .metadata.creationTimestamp
+      name: Age
+      type: date
+    name: v1alpha1
     schema:
       openAPIV3Schema:
         description: ElasticsearchBinding is the Schema for the elasticsearchbindings
