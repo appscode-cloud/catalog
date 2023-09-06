@@ -21,6 +21,8 @@ import (
 	kmapi "kmodules.xyz/client-go/api/v1"
 )
 
+const ResourceKindKafkaBinding = "KafkaBinding"
+
 // KafkaBindingSpec defines the desired state of KafkaBinding
 type KafkaBindingSpec struct {
 	// SourceRef refers to the source app instance.

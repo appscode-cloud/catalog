@@ -21,6 +21,8 @@ import (
 	kmapi "kmodules.xyz/client-go/api/v1"
 )
 
+const ResourceKindElasticSearchBinding = "ElasticsearchBinding"
+
 // ElasticsearchBindingSpec defines the desired state of ElasticsearchBinding
 type ElasticsearchBindingSpec struct {
 	// SourceRef refers to the source app instance.

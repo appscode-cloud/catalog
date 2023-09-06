@@ -21,6 +21,8 @@ import (
 	kmapi "kmodules.xyz/client-go/api/v1"
 )
 
+const ResourceKindMySQLBinding = "MySQLBinding"
+
 // MySQLBindingSpec defines the desired state of MySQLBinding
 type MySQLBindingSpec struct {
 	// SourceRef refers to the source app instance.

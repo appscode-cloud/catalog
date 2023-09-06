@@ -21,6 +21,8 @@ import (
 	kmapi "kmodules.xyz/client-go/api/v1"
 )
 
+const ResourceKindMemcachedBinding = "MemcachedBinding"
+
 // MemcachedBindingSpec defines the desired state of MemcachedBinding
 type MemcachedBindingSpec struct {
 	// SourceRef refers to the source app instance.
