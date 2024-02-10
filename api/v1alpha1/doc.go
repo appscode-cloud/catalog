@@ -19,5 +19,5 @@ limitations under the License.
 // +k8s:openapi-gen=true
 // +k8s:deepcopy-gen=package
 // +k8s:defaulter-gen=TypeMeta
-// +groupName=catalog.kubeware.dev
+// +groupName=catalog.appscode.com
 package v1alpha1 // import "go.kubeware.dev/catalog/api/v1alpha1"

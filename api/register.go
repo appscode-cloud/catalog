@@ -17,5 +17,5 @@ limitations under the License.
 package appcatalog
 
 const (
-	GroupName = "catalog.kubeware.dev"
+	GroupName = "catalog.appscode.com"
 )
