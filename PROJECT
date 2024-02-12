@@ -2,98 +2,98 @@
 # This file is used to track the info used to scaffold your project
 # and allow the plugins properly work.
 # More info: https://book.kubebuilder.io/reference/project-config.html
-domain: kubeware.dev
+domain: bytebuilders.dev
 layout:
 - go.kubebuilder.io/v4
 projectName: catalog
-repo: go.kubeware.dev/catalog
+repo: go.bytebuilders.dev/catalog
 resources:
 - api:
     crdVersion: v1
     namespaced: true
-  domain: kubeware.dev
+  domain: bytebuilders.dev
   group: catalog
   kind: ElasticsearchBinding
-  path: go.kubeware.dev/catalog/api/v1alpha1
+  path: go.bytebuilders.dev/catalog/api/v1alpha1
   version: v1alpha1
 - api:
     crdVersion: v1
     namespaced: true
-  domain: kubeware.dev
+  domain: bytebuilders.dev
   group: catalog
   kind: KafkaBinding
-  path: go.kubeware.dev/catalog/api/v1alpha1
+  path: go.bytebuilders.dev/catalog/api/v1alpha1
   version: v1alpha1
 - api:
     crdVersion: v1
     namespaced: true
-  domain: kubeware.dev
+  domain: bytebuilders.dev
   group: catalog
   kind: MariaDBBinding
-  path: go.kubeware.dev/catalog/api/v1alpha1
+  path: go.bytebuilders.dev/catalog/api/v1alpha1
   version: v1alpha1
 - api:
     crdVersion: v1
     namespaced: true
-  domain: kubeware.dev
+  domain: bytebuilders.dev
   group: catalog
   kind: MemcachedBinding
-  path: go.kubeware.dev/catalog/api/v1alpha1
+  path: go.bytebuilders.dev/catalog/api/v1alpha1
   version: v1alpha1
 - api:
     crdVersion: v1
     namespaced: true
-  domain: kubeware.dev
+  domain: bytebuilders.dev
   group: catalog
   kind: MongoDBBinding
-  path: go.kubeware.dev/catalog/api/v1alpha1
+  path: go.bytebuilders.dev/catalog/api/v1alpha1
   version: v1alpha1
 - api:
     crdVersion: v1
     namespaced: true
-  domain: kubeware.dev
+  domain: bytebuilders.dev
   group: catalog
   kind: MySQLBinding
-  path: go.kubeware.dev/catalog/api/v1alpha1
+  path: go.bytebuilders.dev/catalog/api/v1alpha1
   version: v1alpha1
 - api:
     crdVersion: v1
     namespaced: true
-  domain: kubeware.dev
+  domain: bytebuilders.dev
   group: catalog
   kind: PerconaXtraDBBinding
-  path: go.kubeware.dev/catalog/api/v1alpha1
+  path: go.bytebuilders.dev/catalog/api/v1alpha1
   version: v1alpha1
 - api:
     crdVersion: v1
     namespaced: true
-  domain: kubeware.dev
+  domain: bytebuilders.dev
   group: catalog
   kind: PgBouncerBinding
-  path: go.kubeware.dev/catalog/api/v1alpha1
+  path: go.bytebuilders.dev/catalog/api/v1alpha1
   version: v1alpha1
 - api:
     crdVersion: v1
     namespaced: true
-  domain: kubeware.dev
+  domain: bytebuilders.dev
   group: catalog
   kind: PostgresBinding
-  path: go.kubeware.dev/catalog/api/v1alpha1
+  path: go.bytebuilders.dev/catalog/api/v1alpha1
   version: v1alpha1
 - api:
     crdVersion: v1
     namespaced: true
-  domain: kubeware.dev
+  domain: bytebuilders.dev
   group: catalog
   kind: ProxySQLBinding
-  path: go.kubeware.dev/catalog/api/v1alpha1
+  path: go.bytebuilders.dev/catalog/api/v1alpha1
   version: v1alpha1
 - api:
     crdVersion: v1
     namespaced: true
-  domain: kubeware.dev
+  domain: bytebuilders.dev
   group: catalog
   kind: RedisBinding
-  path: go.kubeware.dev/catalog/api/v1alpha1
+  path: go.bytebuilders.dev/catalog/api/v1alpha1
   version: v1alpha1
 version: "3"

@@ -19,7 +19,7 @@ package install
 import (
 	"testing"
 
-	"go.kubeware.dev/catalog/api/fuzzer"
+	"go.bytebuilders.dev/catalog/api/fuzzer"
 
 	"k8s.io/apimachinery/pkg/api/apitesting/roundtrip"
 )

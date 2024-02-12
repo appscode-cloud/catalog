@@ -1,4 +1,4 @@
-module go.kubeware.dev/catalog
+module go.bytebuilders.dev/catalog
 
 go 1.21.5
 
