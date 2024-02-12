@@ -3,7 +3,7 @@
 ## Project Generator Commands
 
 ```bash
-> kubebuilder init --domain kubeware.dev --skip-go-version-check
+> kubebuilder init --domain bytebuilders.dev --skip-go-version-check
 
 > kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind ElasticsearchBinding
 > kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind KafkaBinding

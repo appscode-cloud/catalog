@@ -17,7 +17,7 @@ limitations under the License.
 package fuzzer
 
 import (
-	"go.kubeware.dev/catalog/api/v1alpha1"
+	"go.bytebuilders.dev/catalog/api/v1alpha1"
 
 	fuzz "github.com/google/gofuzz"
 	runtimeserializer "k8s.io/apimachinery/pkg/runtime/serializer"

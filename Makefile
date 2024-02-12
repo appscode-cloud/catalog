@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-GO_PKG   := go.kubeware.dev
+GO_PKG   := go.bytebuilders.dev
 REPO     := $(notdir $(shell pwd))
 BIN      := catalog
 
@@ -63,8 +63,8 @@ manifests: controller-gen ## Generate WebhookConfiguration, ClusterRole and Cust
 .PHONY: label-crds
 label-crds:
 	@for f in crds/*.yaml; do \
-		echo "applying app.kubernetes.io/name=kubeware label to $$f"; \
-		kubectl label --overwrite -f $$f --local=true -o yaml app.kubernetes.io/name=kubeware > bin/crd.yaml; \
+		echo "applying app.kubernetes.io/name=ace label to $$f"; \
+		kubectl label --overwrite -f $$f --local=true -o yaml app.kubernetes.io/name=ace > bin/crd.yaml; \
 		mv bin/crd.yaml $$f; \
 	done
 	@echo ""
