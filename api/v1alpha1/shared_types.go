@@ -17,6 +17,7 @@ limitations under the License.
 package v1alpha1
 
 import (
+	core "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	kmapi "kmodules.xyz/client-go/api/v1"
 	"sigs.k8s.io/controller-runtime/pkg/client"
@@ -82,6 +83,9 @@ type BindingStatus struct {
 	// Specifies the current phase of the App
 	// +optional
 	Phase BindingPhase `json:"phase,omitempty"`
+
+	// +optional
+	SecretRef *core.LocalObjectReference `json:"secretRef,omitempty"`
 
 	// +optional
 	Source *runtime.RawExtension `json:"source,omitempty"`

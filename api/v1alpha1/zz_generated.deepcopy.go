@@ -21,6 +21,7 @@ limitations under the License.
 package v1alpha1
 
 import (
+	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"kmodules.xyz/client-go/api/v1"
 )
@@ -34,6 +35,11 @@ func (in *BindingStatus) DeepCopyInto(out *BindingStatus) {
 		for i := range *in {
 			(*in)[i].DeepCopyInto(&(*out)[i])
 		}
+	}
+	if in.SecretRef != nil {
+		in, out := &in.SecretRef, &out.SecretRef
+		*out = new(corev1.LocalObjectReference)
+		**out = **in
 	}
 	if in.Source != nil {
 		in, out := &in.Source, &out.Source
