@@ -21,8 +21,8 @@ import (
 	kmapi "kmodules.xyz/client-go/api/v1"
 )
 
-// ProxySQLBindingSpec defines the desired state of ProxySQLBinding
-type ProxySQLBindingSpec struct {
+// SinglestoreBindingSpec defines the desired state of SinglestoreBinding
+type SinglestoreBindingSpec struct {
 	// SourceRef refers to the source app instance.
 	SourceRef kmapi.ObjectReference `json:"sourceRef"`
 }
@@ -36,24 +36,24 @@ type ProxySQLBindingSpec struct {
 // +kubebuilder:printcolumn:name="Status",type="string",JSONPath=".status.phase"
 // +kubebuilder:printcolumn:name="Age",type="date",JSONPath=".metadata.creationTimestamp"
 
-// ProxySQLBinding is the Schema for the proxysqlbindings API
-type ProxySQLBinding struct {
+// SinglestoreBinding is the Schema for the singlestorebindings API
+type SinglestoreBinding struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
-	Spec   ProxySQLBindingSpec `json:"spec,omitempty"`
-	Status BindingStatus       `json:"status,omitempty"`
+	Spec   SinglestoreBindingSpec `json:"spec,omitempty"`
+	Status BindingStatus          `json:"status,omitempty"`
 }
 
 //+kubebuilder:object:root=true
 
-// ProxySQLBindingList contains a list of ProxySQLBinding
-type ProxySQLBindingList struct {
+// SinglestoreBindingList contains a list of SinglestoreBinding
+type SinglestoreBindingList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []ProxySQLBinding `json:"items"`
+	Items           []SinglestoreBinding `json:"items"`
 }
 
 func init() {
-	SchemeBuilder.Register(&ProxySQLBinding{}, &ProxySQLBindingList{})
+	SchemeBuilder.Register(&SinglestoreBinding{}, &SinglestoreBindingList{})
 }

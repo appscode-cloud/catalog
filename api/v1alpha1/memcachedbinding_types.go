@@ -1,5 +1,5 @@
 /*
-Copyright 2023.
+Copyright AppsCode Inc. and Contributors
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -27,9 +27,9 @@ type MemcachedBindingSpec struct {
 	SourceRef kmapi.ObjectReference `json:"sourceRef"`
 }
 
-//+kubebuilder:object:root=true
+// +kubebuilder:object:root=true
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
-//+kubebuilder:subresource:status
+// +kubebuilder:subresource:status
 // +kubebuilder:resource:categories={kubedb,appscode}
 // +kubebuilder:printcolumn:name="Src_NS",type="string",JSONPath=".spec.sourceRef.namespace"
 // +kubebuilder:printcolumn:name="Src_Name",type="string",JSONPath=".spec.sourceRef.name"
@@ -46,7 +46,6 @@ type MemcachedBinding struct {
 }
 
 //+kubebuilder:object:root=true
-// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // MemcachedBindingList contains a list of MemcachedBinding
 type MemcachedBindingList struct {
@@ -57,18 +56,4 @@ type MemcachedBindingList struct {
 
 func init() {
 	SchemeBuilder.Register(&MemcachedBinding{}, &MemcachedBindingList{})
-}
-
-var _ BindingInterface = &MemcachedBinding{}
-
-func (in *MemcachedBinding) GetStatus() *BindingStatus {
-	return &in.Status
-}
-
-func (in *MemcachedBinding) GetConditions() kmapi.Conditions {
-	return in.Status.Conditions
-}
-
-func (in *MemcachedBinding) SetConditions(conditions kmapi.Conditions) {
-	in.Status.Conditions = conditions
 }
