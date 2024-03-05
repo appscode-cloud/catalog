@@ -96,4 +96,68 @@ resources:
   kind: RedisBinding
   path: go.bytebuilders.dev/catalog/api/v1alpha1
   version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: bytebuilders.dev
+  group: catalog
+  kind: DruidBinding
+  path: go.bytebuilders.dev/catalog/api/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: bytebuilders.dev
+  group: catalog
+  kind: FerretDBBinding
+  path: go.bytebuilders.dev/catalog/api/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: bytebuilders.dev
+  group: catalog
+  kind: MicrosoftSQLServerBinding
+  path: go.bytebuilders.dev/catalog/api/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: bytebuilders.dev
+  group: catalog
+  kind: PgpoolBinding
+  path: go.bytebuilders.dev/catalog/api/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: bytebuilders.dev
+  group: catalog
+  kind: RabbitMQBinding
+  path: go.bytebuilders.dev/catalog/api/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: bytebuilders.dev
+  group: catalog
+  kind: SinglestoreBinding
+  path: go.bytebuilders.dev/catalog/api/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: bytebuilders.dev
+  group: catalog
+  kind: SolrBinding
+  path: go.bytebuilders.dev/catalog/api/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: bytebuilders.dev
+  group: catalog
+  kind: ZooKeeperBinding
+  path: go.bytebuilders.dev/catalog/api/v1alpha1
+  version: v1alpha1
 version: "3"

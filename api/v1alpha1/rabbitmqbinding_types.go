@@ -21,8 +21,8 @@ import (
 	kmapi "kmodules.xyz/client-go/api/v1"
 )
 
-// ProxySQLBindingSpec defines the desired state of ProxySQLBinding
-type ProxySQLBindingSpec struct {
+// RabbitMQBindingSpec defines the desired state of RabbitMQBinding
+type RabbitMQBindingSpec struct {
 	// SourceRef refers to the source app instance.
 	SourceRef kmapi.ObjectReference `json:"sourceRef"`
 }
@@ -36,24 +36,24 @@ type ProxySQLBindingSpec struct {
 // +kubebuilder:printcolumn:name="Status",type="string",JSONPath=".status.phase"
 // +kubebuilder:printcolumn:name="Age",type="date",JSONPath=".metadata.creationTimestamp"
 
-// ProxySQLBinding is the Schema for the proxysqlbindings API
-type ProxySQLBinding struct {
+// RabbitMQBinding is the Schema for the rabbitmqbindings API
+type RabbitMQBinding struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
-	Spec   ProxySQLBindingSpec `json:"spec,omitempty"`
+	Spec   RabbitMQBindingSpec `json:"spec,omitempty"`
 	Status BindingStatus       `json:"status,omitempty"`
 }
 
 //+kubebuilder:object:root=true
 
-// ProxySQLBindingList contains a list of ProxySQLBinding
-type ProxySQLBindingList struct {
+// RabbitMQBindingList contains a list of RabbitMQBinding
+type RabbitMQBindingList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []ProxySQLBinding `json:"items"`
+	Items           []RabbitMQBinding `json:"items"`
 }
 
 func init() {
-	SchemeBuilder.Register(&ProxySQLBinding{}, &ProxySQLBindingList{})
+	SchemeBuilder.Register(&RabbitMQBinding{}, &RabbitMQBindingList{})
 }

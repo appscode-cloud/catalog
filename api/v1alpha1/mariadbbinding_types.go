@@ -27,9 +27,9 @@ type MariaDBBindingSpec struct {
 	SourceRef kmapi.ObjectReference `json:"sourceRef"`
 }
 
-//+kubebuilder:object:root=true
+// +kubebuilder:object:root=true
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
-//+kubebuilder:subresource:status
+// +kubebuilder:subresource:status
 // +kubebuilder:resource:categories={kubedb,appscode}
 // +kubebuilder:printcolumn:name="Src_NS",type="string",JSONPath=".spec.sourceRef.namespace"
 // +kubebuilder:printcolumn:name="Src_Name",type="string",JSONPath=".spec.sourceRef.name"
