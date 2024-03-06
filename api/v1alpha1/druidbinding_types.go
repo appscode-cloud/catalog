@@ -21,6 +21,12 @@ import (
 	kmapi "kmodules.xyz/client-go/api/v1"
 )
 
+const (
+	ResourceKindDruidBinding = "DruidBinding"
+	ResourceDruidBinding     = "druidbinding"
+	ResourceDruidBindings    = "druidbindings"
+)
+
 // DruidBindingSpec defines the desired state of DruidBinding
 type DruidBindingSpec struct {
 	// SourceRef refers to the source app instance.

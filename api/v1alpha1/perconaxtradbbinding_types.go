@@ -21,6 +21,12 @@ import (
 	kmapi "kmodules.xyz/client-go/api/v1"
 )
 
+const (
+	ResourceKindPerconaXtraDBBinding = "PerconaXtraDBBinding"
+	ResourcePerconaXtraDBBinding     = "perconaxtradbbinding"
+	ResourcePerconaXtraDBBindings    = "perconaxtradbbindings"
+)
+
 // PerconaXtraDBBindingSpec defines the desired state of PerconaXtraDBBinding
 type PerconaXtraDBBindingSpec struct {
 	// SourceRef refers to the source app instance.

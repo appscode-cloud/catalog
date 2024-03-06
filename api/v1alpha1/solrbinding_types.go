@@ -21,6 +21,12 @@ import (
 	kmapi "kmodules.xyz/client-go/api/v1"
 )
 
+const (
+	ResourceKindSolrBinding = "SolrBinding"
+	ResourceSolrBinding     = "solrbinding"
+	ResourceSolrBindings    = "solrbindings"
+)
+
 // SolrBindingSpec defines the desired state of SolrBinding
 type SolrBindingSpec struct {
 	// SourceRef refers to the source app instance.

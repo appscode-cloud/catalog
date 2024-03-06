@@ -21,6 +21,12 @@ import (
 	kmapi "kmodules.xyz/client-go/api/v1"
 )
 
+const (
+	ResourceKindMariaDBBinding = "MariaDBBinding"
+	ResourceMariaDBBinding     = "mariadbbinding"
+	ResourceMariaDBBindings    = "mariadbbindings"
+)
+
 // MariaDBBindingSpec defines the desired state of MariaDBBinding
 type MariaDBBindingSpec struct {
 	// SourceRef refers to the source app instance.

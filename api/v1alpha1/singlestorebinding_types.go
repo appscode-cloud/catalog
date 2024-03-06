@@ -21,6 +21,12 @@ import (
 	kmapi "kmodules.xyz/client-go/api/v1"
 )
 
+const (
+	ResourceKindSinglestoreBinding = "SinglestoreBinding"
+	ResourceSinglestoreBinding     = "singlestorebinding"
+	ResourceSinglestoreBindings    = "singlestorebindings"
+)
+
 // SinglestoreBindingSpec defines the desired state of SinglestoreBinding
 type SinglestoreBindingSpec struct {
 	// SourceRef refers to the source app instance.

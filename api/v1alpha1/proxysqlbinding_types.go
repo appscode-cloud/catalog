@@ -21,6 +21,12 @@ import (
 	kmapi "kmodules.xyz/client-go/api/v1"
 )
 
+const (
+	ResourceKindProxySQLBinding = "ProxySQLBinding"
+	ResourceProxySQLBinding     = "proxysqlbinding"
+	ResourceProxySQLBindings    = "proxysqlbindings"
+)
+
 // ProxySQLBindingSpec defines the desired state of ProxySQLBinding
 type ProxySQLBindingSpec struct {
 	// SourceRef refers to the source app instance.

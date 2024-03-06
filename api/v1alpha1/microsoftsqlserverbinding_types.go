@@ -21,6 +21,12 @@ import (
 	kmapi "kmodules.xyz/client-go/api/v1"
 )
 
+const (
+	ResourceKindMicrosoftSQLServerBinding = "MicrosoftSQLServerBinding"
+	ResourceMicrosoftSQLServerBinding     = "microsoftsqlserverbinding"
+	ResourceMicrosoftSQLServerBindings    = "microsoftsqlserverbindings"
+)
+
 // MicrosoftSQLServerBindingSpec defines the desired state of MicrosoftSQLServerBinding
 type MicrosoftSQLServerBindingSpec struct {
 	// SourceRef refers to the source app instance.

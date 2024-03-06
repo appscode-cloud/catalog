@@ -21,6 +21,12 @@ import (
 	kmapi "kmodules.xyz/client-go/api/v1"
 )
 
+const (
+	ResourceKindFerretDBBinding = "FerretDBBinding"
+	ResourceFerretDBBinding     = "ferretdbbinding"
+	ResourceFerretDBBindings    = "ferretdbbindings"
+)
+
 // FerretDBBindingSpec defines the desired state of FerretDBBinding
 type FerretDBBindingSpec struct {
 	// SourceRef refers to the source app instance.
