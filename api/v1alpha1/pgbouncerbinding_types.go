@@ -21,6 +21,12 @@ import (
 	kmapi "kmodules.xyz/client-go/api/v1"
 )
 
+const (
+	ResourceKindPgBouncerBinding = "PgBouncerBinding"
+	ResourcePgBouncerBinding     = "pgbouncerbinding"
+	ResourcePgBouncerBindings    = "pgbouncerbindings"
+)
+
 // PgBouncerBindingSpec defines the desired state of PgBouncerBinding
 type PgBouncerBindingSpec struct {
 	// SourceRef refers to the source app instance.

@@ -21,6 +21,12 @@ import (
 	kmapi "kmodules.xyz/client-go/api/v1"
 )
 
+const (
+	ResourceKindPgpoolBinding = "PgpoolBinding"
+	ResourcePgpoolBinding     = "pgpoolbinding"
+	ResourcePgpoolBindings    = "pgpoolbindings"
+)
+
 // PgpoolBindingSpec defines the desired state of PgpoolBinding
 type PgpoolBindingSpec struct {
 	// SourceRef refers to the source app instance.

@@ -21,6 +21,12 @@ import (
 	kmapi "kmodules.xyz/client-go/api/v1"
 )
 
+const (
+	ResourceKindZooKeeperBinding = "ZooKeeperBinding"
+	ResourceZooKeeperBinding     = "zookeeperbinding"
+	ResourceZooKeeperBindings    = "zookeeperbindings"
+)
+
 // ZooKeeperBindingSpec defines the desired state of ZooKeeperBinding
 type ZooKeeperBindingSpec struct {
 	// SourceRef refers to the source app instance.

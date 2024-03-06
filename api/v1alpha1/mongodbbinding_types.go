@@ -21,6 +21,12 @@ import (
 	kmapi "kmodules.xyz/client-go/api/v1"
 )
 
+const (
+	ResourceKindMongoDBBinding = "MongoDBBinding"
+	ResourceMongoDBBinding     = "mongodbbinding"
+	ResourceMongoDBBindings    = "mongodbbindings"
+)
+
 // MongoDBBindingSpec defines the desired state of MongoDBBinding
 type MongoDBBindingSpec struct {
 	// SourceRef refers to the source app instance.

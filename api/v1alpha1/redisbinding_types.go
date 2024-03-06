@@ -21,6 +21,12 @@ import (
 	kmapi "kmodules.xyz/client-go/api/v1"
 )
 
+const (
+	ResourceKindRedisBinding = "RedisBinding"
+	ResourceRedisBinding     = "redisbinding"
+	ResourceRedisBindings    = "redisbindings"
+)
+
 // RedisBindingSpec defines the desired state of RedisBinding
 type RedisBindingSpec struct {
 	// SourceRef refers to the source app instance.

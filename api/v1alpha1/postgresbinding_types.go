@@ -21,6 +21,12 @@ import (
 	kmapi "kmodules.xyz/client-go/api/v1"
 )
 
+const (
+	ResourceKindPostgresBinding = "PostgresBinding"
+	ResourcePostgresBinding     = "postgresbinding"
+	ResourcePostgresBindings    = "postgresbindings"
+)
+
 // PostgresBindingSpec defines the desired state of PostgresBinding
 type PostgresBindingSpec struct {
 	// SourceRef refers to the source app instance.

@@ -21,6 +21,12 @@ import (
 	kmapi "kmodules.xyz/client-go/api/v1"
 )
 
+const (
+	ResourceKindRabbitMQBinding = "RabbitMQBinding"
+	ResourceRabbitMQBinding     = "rabbitmqbinding"
+	ResourceRabbitMQBindings    = "rabbitmqbindings"
+)
+
 // RabbitMQBindingSpec defines the desired state of RabbitMQBinding
 type RabbitMQBindingSpec struct {
 	// SourceRef refers to the source app instance.
