@@ -4,6 +4,7 @@ metadata:
   creationTimestamp: null
   labels:
     app.kubernetes.io/name: ace
+    kube-bind.appscode.com/exported: "true"
   name: proxysqlbindings.catalog.appscode.com
 spec:
   group: catalog.appscode.com

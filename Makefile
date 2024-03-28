@@ -66,6 +66,8 @@ label-crds:
 		echo "applying app.kubernetes.io/name=ace label to $$f"; \
 		kubectl label --overwrite -f $$f --local=true -o yaml app.kubernetes.io/name=ace > bin/crd.yaml; \
 		mv bin/crd.yaml $$f; \
+		kubectl label --overwrite -f $$f --local=true -o yaml kube-bind.appscode.com/exported=true > bin/crd.yaml; \
+		mv bin/crd.yaml $$f; \
 	done
 	@echo ""
 
