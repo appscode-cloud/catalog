@@ -114,7 +114,7 @@ type NamedServiceStatus struct {
 	// Alias represents the identifier of the service.
 	Alias string `json:"alias"`
 
-	Ports []ofst.ServicePort `json:"ports"`
+	Ports []ofst.GatewayPort `json:"ports"`
 }
 
 type NamedURL struct {
@@ -124,6 +124,8 @@ type NamedURL struct {
 
 	// URL of the database ui
 	URL string `json:"url"`
+
+	Port ofst.GatewayPort `json:"port"`
 
 	// HelmRelease is the name of the helm release used to deploy this ui
 	// The name format is typically <alias>-<db-name>
