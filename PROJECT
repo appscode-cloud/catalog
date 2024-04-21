@@ -117,7 +117,7 @@ resources:
     namespaced: true
   domain: bytebuilders.dev
   group: catalog
-  kind: MicrosoftSQLServerBinding
+  kind: MSSQLServerBinding
   path: go.bytebuilders.dev/catalog/api/v1alpha1
   version: v1alpha1
 - api:

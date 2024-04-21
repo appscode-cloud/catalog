@@ -12,7 +12,7 @@
 > kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind MariaDBBinding
 > kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind MemcachedBinding
 > kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind MemcachedBinding
-> kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind MicrosoftSQLServerBinding
+> kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind MSSQLServerBinding
 > kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind MongoDBBinding
 > kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind MySQLBinding
 > kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind PerconaXtraDBBinding

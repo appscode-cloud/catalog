@@ -46,8 +46,8 @@ func (_ MemcachedBinding) CustomResourceDefinition() *apiextensions.CustomResour
 	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceMemcachedBindings))
 }
 
-func (_ MicrosoftSQLServerBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
-	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceMicrosoftSQLServerBindings))
+func (_ MSSQLServerBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
+	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceMSSQLServerBindings))
 }
 
 func (_ MongoDBBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {

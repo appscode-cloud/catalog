@@ -22,13 +22,13 @@ import (
 )
 
 const (
-	ResourceKindMicrosoftSQLServerBinding = "MicrosoftSQLServerBinding"
-	ResourceMicrosoftSQLServerBinding     = "microsoftsqlserverbinding"
-	ResourceMicrosoftSQLServerBindings    = "microsoftsqlserverbindings"
+	ResourceKindMSSQLServerBinding = "MSSQLServerBinding"
+	ResourceMSSQLServerBinding     = "mssqlserverbinding"
+	ResourceMSSQLServerBindings    = "mssqlserverbindings"
 )
 
-// MicrosoftSQLServerBindingSpec defines the desired state of MicrosoftSQLServerBinding
-type MicrosoftSQLServerBindingSpec struct {
+// MSSQLServerBindingSpec defines the desired state of MSSQLServerBinding
+type MSSQLServerBindingSpec struct {
 	// SourceRef refers to the source app instance.
 	SourceRef kmapi.ObjectReference `json:"sourceRef"`
 }
@@ -42,24 +42,24 @@ type MicrosoftSQLServerBindingSpec struct {
 // +kubebuilder:printcolumn:name="Status",type="string",JSONPath=".status.phase"
 // +kubebuilder:printcolumn:name="Age",type="date",JSONPath=".metadata.creationTimestamp"
 
-// MicrosoftSQLServerBinding is the Schema for the microsoftsqlserverbindings API
-type MicrosoftSQLServerBinding struct {
+// MSSQLServerBinding is the Schema for the mssqlserverbindings API
+type MSSQLServerBinding struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
-	Spec   MicrosoftSQLServerBindingSpec `json:"spec,omitempty"`
-	Status BindingStatus                 `json:"status,omitempty"`
+	Spec   MSSQLServerBindingSpec `json:"spec,omitempty"`
+	Status BindingStatus          `json:"status,omitempty"`
 }
 
 //+kubebuilder:object:root=true
 
-// MicrosoftSQLServerBindingList contains a list of MicrosoftSQLServerBinding
-type MicrosoftSQLServerBindingList struct {
+// MSSQLServerBindingList contains a list of MSSQLServerBinding
+type MSSQLServerBindingList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []MicrosoftSQLServerBinding `json:"items"`
+	Items           []MSSQLServerBinding `json:"items"`
 }
 
 func init() {
-	SchemeBuilder.Register(&MicrosoftSQLServerBinding{}, &MicrosoftSQLServerBindingList{})
+	SchemeBuilder.Register(&MSSQLServerBinding{}, &MSSQLServerBindingList{})
 }
