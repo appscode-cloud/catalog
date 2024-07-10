@@ -19,11 +19,11 @@ package v1alpha1
 import (
 	"context"
 	"encoding/json"
-	"fmt"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/types"
+	"k8s.io/klog/v2"
 	kmapi "kmodules.xyz/client-go/api/v1"
 	cutil "kmodules.xyz/client-go/conditions"
 	"kmodules.xyz/client-go/meta"
@@ -139,7 +139,8 @@ func GetPhase(obj BindingInterface) BindingPhase {
 		}
 	}
 	if cond.Type != kmapi.ReadyCondition {
-		panic(fmt.Sprintf("no Ready condition in the status for %s/%s", obj.GetNamespace(), obj.GetName()))
+		klog.Errorf("no Ready condition in the status for %s/%s", obj.GetNamespace(), obj.GetName())
+		return BindingPhasePending
 	}
 
 	if cond.Status == metav1.ConditionTrue {
