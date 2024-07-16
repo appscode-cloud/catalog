@@ -8,9 +8,10 @@ require (
 	github.com/google/gofuzz v1.2.0
 	k8s.io/api v0.30.2
 	k8s.io/apimachinery v0.30.2
-	kmodules.xyz/client-go v0.30.5
-	kmodules.xyz/offshoot-api v0.29.4
-	kubevault.dev/apimachinery v0.18.2
+	k8s.io/klog/v2 v2.130.1
+	kmodules.xyz/client-go v0.30.9
+	kmodules.xyz/offshoot-api v0.30.0
+	kubevault.dev/apimachinery v0.18.3
 	sigs.k8s.io/controller-runtime v0.18.4
 	sigs.k8s.io/yaml v1.4.0
 )
@@ -71,9 +72,8 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	k8s.io/apiextensions-apiserver v0.30.1 // indirect
 	k8s.io/client-go v0.30.1 // indirect
-	k8s.io/klog/v2 v2.120.1 // indirect
-	k8s.io/kube-openapi v0.0.0-20240521193020-835d969ad83a // indirect
-	k8s.io/utils v0.0.0-20240310230437-4693a0247e57 // indirect
+	k8s.io/kube-openapi v0.0.0-20240703190633-0aa61b46e8c2 // indirect
+	k8s.io/utils v0.0.0-20240502163921-fe8a2dddb1d0 // indirect
 	sigs.k8s.io/json v0.0.0-20221116044647-bc3834ca7abd // indirect
 	sigs.k8s.io/structured-merge-diff/v4 v4.4.1 // indirect
 )
