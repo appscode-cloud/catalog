@@ -75,6 +75,30 @@ label-crds:
 .PHONY: generate
 generate: controller-gen ## Generate code containing DeepCopy, DeepCopyInto, and DeepCopyObject method implementations.
 	$(CONTROLLER_GEN) object:headerFile="hack/license/go.txt" paths="./..."
+	@$(MAKE) openapi
+
+# https://github.com/appscodelabs/gengo-builder
+CODE_GENERATOR_IMAGE ?= ghcr.io/appscode/gengo:release-1.29
+DOCKER_REPO_ROOT := /go/src/$(GO_PKG)/$(REPO)
+
+# Generate openapi schema
+openapi:
+	@echo "Generating openapi schema"
+	@mkdir -p .config/api-rules
+	@docker run --rm	                                 \
+		-u $$(id -u):$$(id -g)                           \
+		-v /tmp:/.cache                                  \
+		-v $$(pwd):$(DOCKER_REPO_ROOT)                   \
+		-w $(DOCKER_REPO_ROOT)                           \
+		--env HTTP_PROXY=$(HTTP_PROXY)                   \
+		--env HTTPS_PROXY=$(HTTPS_PROXY)                 \
+		$(CODE_GENERATOR_IMAGE)                          \
+		openapi-gen                                      \
+			--v 1 --logtostderr                            \
+			--go-header-file "./hack/license/go.txt" \
+			--input-dirs "$(GO_PKG)/$(REPO)/api/v1alpha1,k8s.io/apimachinery/pkg/apis/meta/v1,k8s.io/apimachinery/pkg/api/resource,k8s.io/apimachinery/pkg/runtime,k8s.io/apimachinery/pkg/util/intstr,k8s.io/apimachinery/pkg/version,k8s.io/api/core/v1,k8s.io/api/apps/v1,kmodules.xyz/client-go/api/v1" \
+			--output-package "$(GO_PKG)/$(REPO)/api/v1alpha1" \
+			--report-filename .config/api-rules/violation_exceptions.list
 
 .PHONY: fmt
 fmt: ## Run go fmt against code.
