@@ -476,14 +476,14 @@ func schema_gobytebuildersdev_catalog_api_v1alpha1_BindingStatus(ref common.Refe
 					},
 					"gateway": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("kubedb.dev/apimachinery/apis/ui/v1alpha1.Gateway"),
+							Ref: ref("kmodules.xyz/offshoot-api/api/v1.Gateway"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"k8s.io/api/core/v1.LocalObjectReference", "k8s.io/apimachinery/pkg/runtime.RawExtension", "kmodules.xyz/client-go/api/v1.Condition", "kubedb.dev/apimachinery/apis/ui/v1alpha1.Gateway"},
+			"k8s.io/api/core/v1.LocalObjectReference", "k8s.io/apimachinery/pkg/runtime.RawExtension", "kmodules.xyz/client-go/api/v1.Condition", "kmodules.xyz/offshoot-api/api/v1.Gateway"},
 	}
 }
 
