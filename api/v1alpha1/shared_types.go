@@ -20,7 +20,7 @@ import (
 	core "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	kmapi "kmodules.xyz/client-go/api/v1"
-	dbuiapi "kubedb.dev/apimachinery/apis/ui/v1alpha1"
+	ofst "kmodules.xyz/offshoot-api/api/v1"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 )
 
@@ -92,7 +92,7 @@ type BindingStatus struct {
 	Source *runtime.RawExtension `json:"source,omitempty"`
 
 	// +optional
-	Gateway *dbuiapi.Gateway `json:"gateway,omitempty"`
+	Gateway *ofst.Gateway `json:"gateway,omitempty"`
 }
 
 // +k8s:deepcopy-gen=false
