@@ -67,6 +67,10 @@ func init() {
 
 var _ BindingInterface = &MariaDBBinding{}
 
+func (in *MariaDBBinding) GetSourceRef() kmapi.ObjectReference {
+	return in.Spec.SourceRef
+}
+
 func (in *MariaDBBinding) GetStatus() *BindingStatus {
 	return &in.Status
 }

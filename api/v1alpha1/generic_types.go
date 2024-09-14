@@ -57,6 +57,10 @@ func init() {
 
 var _ BindingInterface = &GenericBinding{}
 
+func (in *GenericBinding) GetSourceRef() kmapi.ObjectReference {
+	return in.Spec.SourceRef
+}
+
 func (in *GenericBinding) GetStatus() *BindingStatus {
 	return &in.Status
 }
@@ -71,6 +75,15 @@ func (in *GenericBinding) SetConditions(conditions kmapi.Conditions) {
 
 func (dst *GenericBinding) Duckify(srcRaw runtime.Object) error {
 	switch src := srcRaw.(type) {
+	case *ClickHouseBinding:
+		dst.TypeMeta = metav1.TypeMeta{
+			APIVersion: GroupVersion.String(),
+			Kind:       ResourceKindClickHouseBinding,
+		}
+		dst.ObjectMeta = src.ObjectMeta
+		dst.Spec.SourceRef = src.Spec.SourceRef
+		dst.Status = src.Status
+		return nil
 	case *DruidBinding:
 		dst.TypeMeta = metav1.TypeMeta{
 			APIVersion: GroupVersion.String(),

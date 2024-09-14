@@ -67,6 +67,10 @@ func init() {
 
 var _ BindingInterface = &RedisBinding{}
 
+func (in *RedisBinding) GetSourceRef() kmapi.ObjectReference {
+	return in.Spec.SourceRef
+}
+
 func (in *RedisBinding) GetStatus() *BindingStatus {
 	return &in.Status
 }

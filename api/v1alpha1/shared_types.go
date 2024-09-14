@@ -98,6 +98,7 @@ type BindingStatus struct {
 // +k8s:deepcopy-gen=false
 type BindingInterface interface {
 	client.Object
+	GetSourceRef() kmapi.ObjectReference
 	GetStatus() *BindingStatus
 	GetConditions() kmapi.Conditions
 	SetConditions(conditions kmapi.Conditions)
