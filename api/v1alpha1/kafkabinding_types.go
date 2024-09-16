@@ -67,6 +67,10 @@ func init() {
 
 var _ BindingInterface = &KafkaBinding{}
 
+func (in *KafkaBinding) GetSourceRef() kmapi.ObjectReference {
+	return in.Spec.SourceRef
+}
+
 func (in *KafkaBinding) GetStatus() *BindingStatus {
 	return &in.Status
 }
