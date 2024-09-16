@@ -67,6 +67,10 @@ func init() {
 
 var _ BindingInterface = &MySQLBinding{}
 
+func (in *MySQLBinding) GetSourceRef() kmapi.ObjectReference {
+	return in.Spec.SourceRef
+}
+
 func (in *MySQLBinding) GetStatus() *BindingStatus {
 	return &in.Status
 }

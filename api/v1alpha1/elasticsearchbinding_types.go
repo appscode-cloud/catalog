@@ -67,6 +67,10 @@ func init() {
 
 var _ BindingInterface = &ElasticsearchBinding{}
 
+func (in *ElasticsearchBinding) GetSourceRef() kmapi.ObjectReference {
+	return in.Spec.SourceRef
+}
+
 func (in *ElasticsearchBinding) GetStatus() *BindingStatus {
 	return &in.Status
 }

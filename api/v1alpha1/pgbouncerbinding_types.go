@@ -67,6 +67,10 @@ func init() {
 
 var _ BindingInterface = &PgBouncerBinding{}
 
+func (in *PgBouncerBinding) GetSourceRef() kmapi.ObjectReference {
+	return in.Spec.SourceRef
+}
+
 func (in *PgBouncerBinding) GetStatus() *BindingStatus {
 	return &in.Status
 }

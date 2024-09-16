@@ -67,6 +67,10 @@ func init() {
 
 var _ BindingInterface = &PerconaXtraDBBinding{}
 
+func (in *PerconaXtraDBBinding) GetSourceRef() kmapi.ObjectReference {
+	return in.Spec.SourceRef
+}
+
 func (in *PerconaXtraDBBinding) GetStatus() *BindingStatus {
 	return &in.Status
 }

@@ -67,6 +67,10 @@ func init() {
 
 var _ BindingInterface = &MongoDBBinding{}
 
+func (in *MongoDBBinding) GetSourceRef() kmapi.ObjectReference {
+	return in.Spec.SourceRef
+}
+
 func (in *MongoDBBinding) GetStatus() *BindingStatus {
 	return &in.Status
 }

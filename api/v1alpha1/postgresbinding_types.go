@@ -67,6 +67,10 @@ func init() {
 
 var _ BindingInterface = &PostgresBinding{}
 
+func (in *PostgresBinding) GetSourceRef() kmapi.ObjectReference {
+	return in.Spec.SourceRef
+}
+
 func (in *PostgresBinding) GetStatus() *BindingStatus {
 	return &in.Status
 }
