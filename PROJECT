@@ -2,162 +2,179 @@
 # This file is used to track the info used to scaffold your project
 # and allow the plugins properly work.
 # More info: https://book.kubebuilder.io/reference/project-config.html
-domain: bytebuilders.dev
+domain: appscode.com
 layout:
 - go.kubebuilder.io/v4
+multigroup: true
 projectName: catalog
 repo: go.bytebuilders.dev/catalog
 resources:
 - api:
     crdVersion: v1
     namespaced: true
-  domain: bytebuilders.dev
-  group: catalog
-  kind: ElasticsearchBinding
-  path: go.bytebuilders.dev/catalog/api/v1alpha1
-  version: v1alpha1
-- api:
-    crdVersion: v1
-    namespaced: true
-  domain: bytebuilders.dev
-  group: catalog
-  kind: KafkaBinding
-  path: go.bytebuilders.dev/catalog/api/v1alpha1
-  version: v1alpha1
-- api:
-    crdVersion: v1
-    namespaced: true
-  domain: bytebuilders.dev
-  group: catalog
-  kind: MariaDBBinding
-  path: go.bytebuilders.dev/catalog/api/v1alpha1
-  version: v1alpha1
-- api:
-    crdVersion: v1
-    namespaced: true
-  domain: bytebuilders.dev
-  group: catalog
-  kind: MemcachedBinding
-  path: go.bytebuilders.dev/catalog/api/v1alpha1
-  version: v1alpha1
-- api:
-    crdVersion: v1
-    namespaced: true
-  domain: bytebuilders.dev
-  group: catalog
-  kind: MongoDBBinding
-  path: go.bytebuilders.dev/catalog/api/v1alpha1
-  version: v1alpha1
-- api:
-    crdVersion: v1
-    namespaced: true
-  domain: bytebuilders.dev
-  group: catalog
-  kind: MySQLBinding
-  path: go.bytebuilders.dev/catalog/api/v1alpha1
-  version: v1alpha1
-- api:
-    crdVersion: v1
-    namespaced: true
-  domain: bytebuilders.dev
-  group: catalog
-  kind: PerconaXtraDBBinding
-  path: go.bytebuilders.dev/catalog/api/v1alpha1
-  version: v1alpha1
-- api:
-    crdVersion: v1
-    namespaced: true
-  domain: bytebuilders.dev
-  group: catalog
-  kind: PgBouncerBinding
-  path: go.bytebuilders.dev/catalog/api/v1alpha1
-  version: v1alpha1
-- api:
-    crdVersion: v1
-    namespaced: true
-  domain: bytebuilders.dev
-  group: catalog
-  kind: PostgresBinding
-  path: go.bytebuilders.dev/catalog/api/v1alpha1
-  version: v1alpha1
-- api:
-    crdVersion: v1
-    namespaced: true
-  domain: bytebuilders.dev
-  group: catalog
-  kind: ProxySQLBinding
-  path: go.bytebuilders.dev/catalog/api/v1alpha1
-  version: v1alpha1
-- api:
-    crdVersion: v1
-    namespaced: true
-  domain: bytebuilders.dev
-  group: catalog
-  kind: RedisBinding
-  path: go.bytebuilders.dev/catalog/api/v1alpha1
-  version: v1alpha1
-- api:
-    crdVersion: v1
-    namespaced: true
-  domain: bytebuilders.dev
+  domain: appscode.com
   group: catalog
   kind: DruidBinding
-  path: go.bytebuilders.dev/catalog/api/v1alpha1
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
   version: v1alpha1
 - api:
     crdVersion: v1
     namespaced: true
-  domain: bytebuilders.dev
+  domain: appscode.com
+  group: catalog
+  kind: ElasticsearchBinding
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
   group: catalog
   kind: FerretDBBinding
-  path: go.bytebuilders.dev/catalog/api/v1alpha1
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
   version: v1alpha1
 - api:
     crdVersion: v1
     namespaced: true
-  domain: bytebuilders.dev
+  domain: appscode.com
+  group: catalog
+  kind: KafkaBinding
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
+  group: catalog
+  kind: MariaDBBinding
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
+  group: catalog
+  kind: MemcachedBinding
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
   group: catalog
   kind: MSSQLServerBinding
-  path: go.bytebuilders.dev/catalog/api/v1alpha1
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
   version: v1alpha1
 - api:
     crdVersion: v1
     namespaced: true
-  domain: bytebuilders.dev
+  domain: appscode.com
+  group: catalog
+  kind: MongoDBBinding
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
+  group: catalog
+  kind: MySQLBinding
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
+  group: catalog
+  kind: PerconaXtraDBBinding
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
+  group: catalog
+  kind: PgBouncerBinding
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
   group: catalog
   kind: PgpoolBinding
-  path: go.bytebuilders.dev/catalog/api/v1alpha1
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
   version: v1alpha1
 - api:
     crdVersion: v1
     namespaced: true
-  domain: bytebuilders.dev
+  domain: appscode.com
+  group: catalog
+  kind: PostgresBinding
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
+  group: catalog
+  kind: ProxySQLBinding
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
   group: catalog
   kind: RabbitMQBinding
-  path: go.bytebuilders.dev/catalog/api/v1alpha1
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
   version: v1alpha1
 - api:
     crdVersion: v1
     namespaced: true
-  domain: bytebuilders.dev
+  domain: appscode.com
+  group: catalog
+  kind: RedisBinding
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
   group: catalog
   kind: SinglestoreBinding
-  path: go.bytebuilders.dev/catalog/api/v1alpha1
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
   version: v1alpha1
 - api:
     crdVersion: v1
     namespaced: true
-  domain: bytebuilders.dev
+  domain: appscode.com
   group: catalog
   kind: SolrBinding
-  path: go.bytebuilders.dev/catalog/api/v1alpha1
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
   version: v1alpha1
 - api:
     crdVersion: v1
     namespaced: true
-  domain: bytebuilders.dev
+  domain: appscode.com
   group: catalog
   kind: ZooKeeperBinding
-  path: go.bytebuilders.dev/catalog/api/v1alpha1
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
+  group: gateway
+  kind: GatewayConfig
+  path: go.bytebuilders.dev/catalog/api/gateway/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
+  group: gateway
+  kind: GatewayPreset
+  path: go.bytebuilders.dev/catalog/api/gateway/v1alpha1
   version: v1alpha1
 version: "3"

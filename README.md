@@ -2,30 +2,34 @@
 
 ## Project Generator Commands
 
-```bash
-> kubebuilder init --domain bytebuilders.dev --skip-go-version-check
+```sh
+kubebuilder init --domain appscode.com --skip-go-version-check
+kubebuilder edit --multigroup=true
 
-> kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind DruidBinding
-> kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind ElasticsearchBinding
-> kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind FerretDBBinding
-> kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind KafkaBinding
-> kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind MariaDBBinding
-> kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind MemcachedBinding
-> kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind MemcachedBinding
-> kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind MSSQLServerBinding
-> kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind MongoDBBinding
-> kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind MySQLBinding
-> kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind PerconaXtraDBBinding
-> kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind PgBouncerBinding
-> kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind PgpoolBinding
-> kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind PostgresBinding
-> kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind ProxySQLBinding
-> kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind ProxySQLBinding
-> kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind RabbitMQBinding
-> kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind RedisBinding
-> kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind SinglestoreBinding
-> kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind SolrBinding
-> kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind ZooKeeperBinding
+kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind DruidBinding
+kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind ElasticsearchBinding
+kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind FerretDBBinding
+kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind KafkaBinding
+kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind MariaDBBinding
+kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind MemcachedBinding
+kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind MemcachedBinding
+kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind MSSQLServerBinding
+kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind MongoDBBinding
+kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind MySQLBinding
+kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind PerconaXtraDBBinding
+kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind PgBouncerBinding
+kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind PgpoolBinding
+kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind PostgresBinding
+kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind ProxySQLBinding
+kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind ProxySQLBinding
+kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind RabbitMQBinding
+kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind RedisBinding
+kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind SinglestoreBinding
+kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind SolrBinding
+kubebuilder create api --resource=true --controller=false --force --group catalog --version v1alpha1 --kind ZooKeeperBinding
+
+kubebuilder create api --resource=true --controller=false --force --group gateway --version v1alpha1 --kind GatewayConfig
+kubebuilder create api --resource=true --controller=false --force --group gateway --version v1alpha1 --kind GatewayPreset
 ```
 
 ## Getting Started
