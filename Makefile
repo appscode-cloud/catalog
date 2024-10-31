@@ -57,7 +57,7 @@ help: ## Display this help.
 
 .PHONY: manifests
 manifests: controller-gen ## Generate WebhookConfiguration, ClusterRole and CustomResourceDefinition objects.
-	$(CONTROLLER_GEN) rbac:roleName=manager-role crd:allowDangerousTypes=true paths="./..." output:crd:artifacts:config=crds
+	$(CONTROLLER_GEN) rbac:roleName=manager-role crd:allowDangerousTypes=true,maxDescLen=0 paths="./..." output:crd:artifacts:config=crds
 	@$(MAKE) label-crds --no-print-directory
 	@rm -rf crds/catalog.appscode.com_genericbindings.yaml
 

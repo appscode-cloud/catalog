@@ -78,7 +78,7 @@ type BindingStatus struct {
 	// +optional
 	// +listType=map
 	// +listMapKey=type
-	// +kubebuilder:validation:MaxItems=8
+	// +kubebuilder:validation:MaxItems=12
 	Conditions []kmapi.Condition `json:"conditions,omitempty"`
 
 	// Specifies the current phase of the App
