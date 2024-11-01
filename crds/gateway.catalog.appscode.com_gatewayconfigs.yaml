@@ -517,13 +517,26 @@ spec:
                             type: string
                         type: object
                     type: object
+                  service:
+                    properties:
+                      nodeportRange:
+                        type: string
+                      portRange:
+                        type: string
+                    required:
+                    - nodeportRange
+                    - portRange
+                    type: object
                   tag:
                     type: string
                 required:
                 - image
+                - service
                 - tag
                 type: object
               gateway:
+                description: VoyagerGatewaySpec is the schema for Operator Operator
+                  values file
                 properties:
                   certgen:
                     properties:
@@ -2337,8 +2350,6 @@ spec:
                     - ports
                     - replicas
                     type: object
-                  enabled:
-                    type: boolean
                   gateway-converter:
                     properties:
                       affinity:
@@ -3965,8 +3976,6 @@ spec:
                     required:
                     - minAvailable
                     type: object
-                required:
-                - enabled
                 type: object
               gateway-dns:
                 properties:
@@ -4511,6 +4520,23 @@ spec:
                 - host
                 - hostType
                 - tls
+                type: object
+              vaultServer:
+                description: ObjectReference contains enough information to let you
+                  inspect or modify the referred object.
+                properties:
+                  name:
+                    description: |-
+                      Name of the referent.
+                      More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+                    type: string
+                  namespace:
+                    description: |-
+                      Namespace of the referent.
+                      More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
+                    type: string
+                required:
+                - name
                 type: object
             required:
             - cluster
