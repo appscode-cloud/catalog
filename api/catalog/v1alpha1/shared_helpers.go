@@ -122,6 +122,8 @@ func ConditionsOrder() []kmapi.ConditionType {
 		BindingConditionTypeSecretEngineReady,
 		BindingConditionTypeRoleReady,
 		BindingConditionTypeSecretAccessRequestReady,
+		BindingConditionTypeGatewayReady,
+		BindingConditionTypeRouteReady,
 	}
 }
 
@@ -150,12 +152,15 @@ func GetPhase(obj BindingInterface) BindingPhase {
 		return BindingPhaseExpired
 	}
 
-	// DB, Vault & SA should exists & Ready
+	// DB, Vault & SA, Route should exists & Ready
 	if cond.Reason == BindingConditionReasonDBNotCreated ||
 		cond.Reason == BindingConditionReasonDBProvisioning ||
 		cond.Reason == BindingConditionReasonVaultNotCreated ||
 		cond.Reason == BindingConditionReasonVaultProvisioning ||
-		cond.Reason == BindingConditionReasonServiceAccountNotCreated {
+		cond.Reason == BindingConditionReasonServiceAccountNotCreated ||
+		cond.Reason == BindingCoonditionReasonRouteStatusUnavailable ||
+		cond.Reason == BindingConditionReasonUIRouteNotReady ||
+		cond.Reason == BindingConditionReasonUIGatewayNotReady {
 		return BindingPhasePending
 	}
 
@@ -169,7 +174,14 @@ func GetPhase(obj BindingInterface) BindingPhase {
 		return BindingPhaseInProgress
 	}
 
-	if cond.Reason == BindingConditionReasonSecretAccessRequestDenied {
+	if cond.Reason == BindingConditionReasonSecretAccessRequestDenied ||
+		cond.Reason == BindingConditionReasonListenerNotAccepted ||
+		cond.Reason == BindingConditionReasonListenerUnresolvedReference ||
+		cond.Reason == BindingConditionReasonListenerNotProgrammed ||
+		cond.Reason == BindingConditionReasonGatewayNotAccepted ||
+		cond.Reason == BindingConditionReasonGatewayNotProgrammed ||
+		cond.Reason == BindingConditionReasonRouteNotAccepted ||
+		cond.Reason == BindingConditionReasonBackendUnresolvedReference {
 		return BindingPhaseFailed
 	}
 
