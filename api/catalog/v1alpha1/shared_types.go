@@ -63,7 +63,7 @@ const (
 	BindingConditionReasonListenerNotProgrammed       = "ListenerNotProgrammed"
 	BindingConditionReasonListenerUnresolvedReference = "ListenerUnresolvedReference"
 	BindingConditionReasonRouteNotAccepted            = "RouteNotAccepted"
-	BindingConditionReasonUnresolvedBackendReference  = "UnresolvedBackendReference"
+	BindingConditionReasonBackendUnresolvedReference  = "BackendUnresolvedReference"
 	BindingCoonditionReasonRouteStatusUnavailable     = "StatusUnavailable"
 	BindingConditionReasonUIGatewayNotReady           = "UIGatewayNotReady"
 	BindingConditionReasonUIRouteNotReady             = "UIRouteNotReady"

@@ -181,7 +181,7 @@ func GetPhase(obj BindingInterface) BindingPhase {
 		cond.Reason == BindingConditionReasonGatewayNotAccepted ||
 		cond.Reason == BindingConditionReasonGatewayNotProgrammed ||
 		cond.Reason == BindingConditionReasonRouteNotAccepted ||
-		cond.Reason == BindingConditionReasonUnresolvedBackendReference {
+		cond.Reason == BindingConditionReasonBackendUnresolvedReference {
 		return BindingPhaseFailed
 	}
 

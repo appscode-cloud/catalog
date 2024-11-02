@@ -740,7 +740,7 @@ sigs.k8s.io/structured-merge-diff/v4/value
 ## explicit; go 1.12
 sigs.k8s.io/yaml
 sigs.k8s.io/yaml/goyaml.v2
-# voyagermesh.dev/installer v0.0.0-20241031222143-9bbc52d51300
+# voyagermesh.dev/installer v0.0.0-20241102060616-ff1e91bfcef8
 ## explicit; go 1.22.0
 voyagermesh.dev/installer/apis/installer
 voyagermesh.dev/installer/apis/installer/v1alpha1
