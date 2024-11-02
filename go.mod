@@ -17,7 +17,7 @@ require (
 	kubevault.dev/apimachinery v0.18.3
 	sigs.k8s.io/controller-runtime v0.18.4
 	sigs.k8s.io/yaml v1.4.0
-	voyagermesh.dev/installer v0.0.0-20241031222143-9bbc52d51300
+	voyagermesh.dev/installer v0.0.0-20241102060616-ff1e91bfcef8
 )
 
 require (

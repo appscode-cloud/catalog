@@ -31,6 +31,9 @@ const (
 	BindingConditionTypeSecretEngineReady        kmapi.ConditionType = "SecretEngineReady"
 	BindingConditionTypeRoleReady                kmapi.ConditionType = "RoleReady"
 	BindingConditionTypeSecretAccessRequestReady kmapi.ConditionType = "SecretAccessRequestReady"
+	BindingConditionTypeGatewayReady             kmapi.ConditionType = "GatewayReady"
+	BindingConditionTypeRouteReady               kmapi.ConditionType = "RouteReady"
+	BindingConditionTypeUIReady                  kmapi.ConditionType = "UIReady"
 )
 
 const (
@@ -53,6 +56,17 @@ const (
 	BindingConditionReasonSecretAccessRequestExpired    = "SecretAccessRequestExpired"
 	BindingConditionReasonSecretAccessRequestApproved   = "SecretAccessRequestApproved"
 	BindingConditionReasonSecretAccessRequestDenied     = "SecretAccessRequestDenied"
+
+	BindingConditionReasonGatewayNotAccepted          = "GatewayNotAccepted"
+	BindingConditionReasonGatewayNotProgrammed        = "GatewayNotProgrammed"
+	BindingConditionReasonListenerNotAccepted         = "ListenerNotAccepted"
+	BindingConditionReasonListenerNotProgrammed       = "ListenerNotProgrammed"
+	BindingConditionReasonListenerUnresolvedReference = "ListenerUnresolvedReference"
+	BindingConditionReasonRouteNotAccepted            = "RouteNotAccepted"
+	BindingConditionReasonBackendUnresolvedReference  = "BackendUnresolvedReference"
+	BindingCoonditionReasonRouteStatusUnavailable     = "StatusUnavailable"
+	BindingConditionReasonUIGatewayNotReady           = "UIGatewayNotReady"
+	BindingConditionReasonUIRouteNotReady             = "UIRouteNotReady"
 )
 
 // +kubebuilder:validation:Enum=Pending;InProgress;Terminating;Current;Failed;Expired
