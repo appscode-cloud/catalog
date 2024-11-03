@@ -133,7 +133,7 @@ func GetPhase(obj BindingInterface) BindingPhase {
 	}
 	conditions := obj.GetConditions()
 	var cond kmapi.Condition
-	for i, _ := range conditions {
+	for i := range conditions {
 		c := conditions[i]
 		if c.Type == kmapi.ReadyCondition {
 			cond = c
