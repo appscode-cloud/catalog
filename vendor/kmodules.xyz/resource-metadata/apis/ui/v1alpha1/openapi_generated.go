@@ -16424,6 +16424,18 @@ func schema_kmodulesxyz_client_go_api_v1_ClusterMetadata(ref common.ReferenceCal
 							Format: "",
 						},
 					},
+					"managerID": {
+						SchemaProps: spec.SchemaProps{
+							Type:   []string{"string"},
+							Format: "",
+						},
+					},
+					"hubClusterID": {
+						SchemaProps: spec.SchemaProps{
+							Type:   []string{"string"},
+							Format: "",
+						},
+					},
 				},
 				Required: []string{"uid"},
 			},
@@ -20506,6 +20518,13 @@ func schema_resource_metadata_apis_ui_v1alpha1_FeatureSpec(ref common.ReferenceC
 					"featureBlock": {
 						SchemaProps: spec.SchemaProps{
 							Description: "FeatureBlock specifies the ui block name of this feature.",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"featureExclusionGroup": {
+						SchemaProps: spec.SchemaProps{
+							Description: "FeatureExclusionGroup specifies the name of the exclusion group for features Only one feature in a feature exclusion group can be installed",
 							Type:        []string{"string"},
 							Format:      "",
 						},
