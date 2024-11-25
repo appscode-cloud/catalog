@@ -215,6 +215,7 @@ type EnvoyValues struct {
 
 const (
 	AllocatedPortsKey    = "catalog.appscode.com/allocated-ports"
+	SeedPortKey          = "catalog.appscode.com/seed-port"
 	DefaultPortRange     = "10000-12767"
 	DefaultNodeportRange = "30000-32767"
 )
