@@ -311,7 +311,7 @@ sigs.k8s.io/structured-merge-diff/v4 v4.4.1 h1:150L+0vs/8DA78h1u02ooW1/fFq/Lwr+s
 sigs.k8s.io/structured-merge-diff/v4 v4.4.1/go.mod h1:N8hJocpFajUSSeSJ9bOZ77VzejKZaXsTtZo4/u7Io08=
 sigs.k8s.io/yaml v1.4.0 h1:Mk1wCc2gy/F0THH0TAp1QYyJNzRm2KCLy3o5ASXVI5E=
 sigs.k8s.io/yaml v1.4.0/go.mod h1:Ejl7/uTz7PSA4eKMyQCUTnhZYNmLIl+5c2lQPGR2BPY=
-voyagermesh.dev/installer v0.0.0-20241102060616-ff1e91bfcef8 h1:dFbzua0lodMBm/NFaaL/NdkElKm9jHJ1VL17/T4l6w4=
-voyagermesh.dev/installer v0.0.0-20241102060616-ff1e91bfcef8/go.mod h1:Ie4YBydkmwa8lN4bi+vZY7gzc02jjzpwOS9vyeEhgnU=
+voyagermesh.dev/installer v0.0.0-20241127160952-d7800071f7ce h1:EDTYadG5r2yZgt0dmGyd5GZk5+lhqo9elWfKJJmXpB8=
+voyagermesh.dev/installer v0.0.0-20241127160952-d7800071f7ce/go.mod h1:Ie4YBydkmwa8lN4bi+vZY7gzc02jjzpwOS9vyeEhgnU=
 x-helm.dev/apimachinery v0.0.16 h1:Eb160xcdH9fMVHak5QSWYWxoaReytch+A7kk25QWjx0=
 x-helm.dev/apimachinery v0.0.16/go.mod h1:05brgFw5oWOX7OTXT090SQojqXjbttqWfqoJo+ejBU4=
