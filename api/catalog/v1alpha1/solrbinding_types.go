@@ -63,3 +63,21 @@ type SolrBindingList struct {
 func init() {
 	SchemeBuilder.Register(&SolrBinding{}, &SolrBindingList{})
 }
+
+var _ BindingInterface = &SolrBinding{}
+
+func (in *SolrBinding) GetSourceRef() kmapi.ObjectReference {
+	return in.Spec.SourceRef
+}
+
+func (in *SolrBinding) GetStatus() *BindingStatus {
+	return &in.Status
+}
+
+func (in *SolrBinding) GetConditions() kmapi.Conditions {
+	return in.Status.Conditions
+}
+
+func (in *SolrBinding) SetConditions(conditions kmapi.Conditions) {
+	in.Status.Conditions = conditions
+}

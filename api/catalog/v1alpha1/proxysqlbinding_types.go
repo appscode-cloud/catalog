@@ -63,3 +63,21 @@ type ProxySQLBindingList struct {
 func init() {
 	SchemeBuilder.Register(&ProxySQLBinding{}, &ProxySQLBindingList{})
 }
+
+var _ BindingInterface = &ProxySQLBinding{}
+
+func (in *ProxySQLBinding) GetSourceRef() kmapi.ObjectReference {
+	return in.Spec.SourceRef
+}
+
+func (in *ProxySQLBinding) GetStatus() *BindingStatus {
+	return &in.Status
+}
+
+func (in *ProxySQLBinding) GetConditions() kmapi.Conditions {
+	return in.Status.Conditions
+}
+
+func (in *ProxySQLBinding) SetConditions(conditions kmapi.Conditions) {
+	in.Status.Conditions = conditions
+}

@@ -63,3 +63,21 @@ type SinglestoreBindingList struct {
 func init() {
 	SchemeBuilder.Register(&SinglestoreBinding{}, &SinglestoreBindingList{})
 }
+
+var _ BindingInterface = &SinglestoreBinding{}
+
+func (in *SinglestoreBinding) GetSourceRef() kmapi.ObjectReference {
+	return in.Spec.SourceRef
+}
+
+func (in *SinglestoreBinding) GetStatus() *BindingStatus {
+	return &in.Status
+}
+
+func (in *SinglestoreBinding) GetConditions() kmapi.Conditions {
+	return in.Status.Conditions
+}
+
+func (in *SinglestoreBinding) SetConditions(conditions kmapi.Conditions) {
+	in.Status.Conditions = conditions
+}
