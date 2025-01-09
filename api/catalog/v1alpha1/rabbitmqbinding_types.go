@@ -63,3 +63,21 @@ type RabbitMQBindingList struct {
 func init() {
 	SchemeBuilder.Register(&RabbitMQBinding{}, &RabbitMQBindingList{})
 }
+
+var _ BindingInterface = &RabbitMQBinding{}
+
+func (in *RabbitMQBinding) GetSourceRef() kmapi.ObjectReference {
+	return in.Spec.SourceRef
+}
+
+func (in *RabbitMQBinding) GetStatus() *BindingStatus {
+	return &in.Status
+}
+
+func (in *RabbitMQBinding) GetConditions() kmapi.Conditions {
+	return in.Status.Conditions
+}
+
+func (in *RabbitMQBinding) SetConditions(conditions kmapi.Conditions) {
+	in.Status.Conditions = conditions
+}

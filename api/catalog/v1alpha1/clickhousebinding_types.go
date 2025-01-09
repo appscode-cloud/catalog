@@ -63,3 +63,21 @@ type ClickHouseBindingList struct {
 func init() {
 	SchemeBuilder.Register(&ClickHouseBinding{}, &ClickHouseBindingList{})
 }
+
+var _ BindingInterface = &ClickHouseBinding{}
+
+func (in *ClickHouseBinding) GetSourceRef() kmapi.ObjectReference {
+	return in.Spec.SourceRef
+}
+
+func (in *ClickHouseBinding) GetStatus() *BindingStatus {
+	return &in.Status
+}
+
+func (in *ClickHouseBinding) GetConditions() kmapi.Conditions {
+	return in.Status.Conditions
+}
+
+func (in *ClickHouseBinding) SetConditions(conditions kmapi.Conditions) {
+	in.Status.Conditions = conditions
+}

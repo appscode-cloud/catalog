@@ -63,3 +63,21 @@ type ZooKeeperBindingList struct {
 func init() {
 	SchemeBuilder.Register(&ZooKeeperBinding{}, &ZooKeeperBindingList{})
 }
+
+var _ BindingInterface = &ZooKeeperBinding{}
+
+func (in *ZooKeeperBinding) GetSourceRef() kmapi.ObjectReference {
+	return in.Spec.SourceRef
+}
+
+func (in *ZooKeeperBinding) GetStatus() *BindingStatus {
+	return &in.Status
+}
+
+func (in *ZooKeeperBinding) GetConditions() kmapi.Conditions {
+	return in.Status.Conditions
+}
+
+func (in *ZooKeeperBinding) SetConditions(conditions kmapi.Conditions) {
+	in.Status.Conditions = conditions
+}

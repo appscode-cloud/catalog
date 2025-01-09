@@ -63,3 +63,21 @@ type FerretDBBindingList struct {
 func init() {
 	SchemeBuilder.Register(&FerretDBBinding{}, &FerretDBBindingList{})
 }
+
+var _ BindingInterface = &FerretDBBinding{}
+
+func (in *FerretDBBinding) GetSourceRef() kmapi.ObjectReference {
+	return in.Spec.SourceRef
+}
+
+func (in *FerretDBBinding) GetStatus() *BindingStatus {
+	return &in.Status
+}
+
+func (in *FerretDBBinding) GetConditions() kmapi.Conditions {
+	return in.Status.Conditions
+}
+
+func (in *FerretDBBinding) SetConditions(conditions kmapi.Conditions) {
+	in.Status.Conditions = conditions
+}

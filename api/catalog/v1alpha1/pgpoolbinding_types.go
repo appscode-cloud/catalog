@@ -63,3 +63,21 @@ type PgpoolBindingList struct {
 func init() {
 	SchemeBuilder.Register(&PgpoolBinding{}, &PgpoolBindingList{})
 }
+
+var _ BindingInterface = &PgpoolBinding{}
+
+func (in *PgpoolBinding) GetSourceRef() kmapi.ObjectReference {
+	return in.Spec.SourceRef
+}
+
+func (in *PgpoolBinding) GetStatus() *BindingStatus {
+	return &in.Status
+}
+
+func (in *PgpoolBinding) GetConditions() kmapi.Conditions {
+	return in.Status.Conditions
+}
+
+func (in *PgpoolBinding) SetConditions(conditions kmapi.Conditions) {
+	in.Status.Conditions = conditions
+}
