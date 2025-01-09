@@ -63,3 +63,21 @@ type DruidBindingList struct {
 func init() {
 	SchemeBuilder.Register(&DruidBinding{}, &DruidBindingList{})
 }
+
+var _ BindingInterface = &DruidBinding{}
+
+func (in *DruidBinding) GetSourceRef() kmapi.ObjectReference {
+	return in.Spec.SourceRef
+}
+
+func (in *DruidBinding) GetStatus() *BindingStatus {
+	return &in.Status
+}
+
+func (in *DruidBinding) GetConditions() kmapi.Conditions {
+	return in.Status.Conditions
+}
+
+func (in *DruidBinding) SetConditions(conditions kmapi.Conditions) {
+	in.Status.Conditions = conditions
+}
