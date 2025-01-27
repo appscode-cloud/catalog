@@ -34,70 +34,50 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
+		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec":              schema_catalog_api_catalog_v1alpha1_BindingSpec(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus":            schema_catalog_api_catalog_v1alpha1_BindingStatus(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ClickHouseBinding":        schema_catalog_api_catalog_v1alpha1_ClickHouseBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ClickHouseBindingList":    schema_catalog_api_catalog_v1alpha1_ClickHouseBindingList(ref),
-		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ClickHouseBindingSpec":    schema_catalog_api_catalog_v1alpha1_ClickHouseBindingSpec(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.DruidBinding":             schema_catalog_api_catalog_v1alpha1_DruidBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.DruidBindingList":         schema_catalog_api_catalog_v1alpha1_DruidBindingList(ref),
-		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.DruidBindingSpec":         schema_catalog_api_catalog_v1alpha1_DruidBindingSpec(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ElasticsearchBinding":     schema_catalog_api_catalog_v1alpha1_ElasticsearchBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ElasticsearchBindingList": schema_catalog_api_catalog_v1alpha1_ElasticsearchBindingList(ref),
-		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ElasticsearchBindingSpec": schema_catalog_api_catalog_v1alpha1_ElasticsearchBindingSpec(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.FerretDBBinding":          schema_catalog_api_catalog_v1alpha1_FerretDBBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.FerretDBBindingList":      schema_catalog_api_catalog_v1alpha1_FerretDBBindingList(ref),
-		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.FerretDBBindingSpec":      schema_catalog_api_catalog_v1alpha1_FerretDBBindingSpec(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.GenericBinding":           schema_catalog_api_catalog_v1alpha1_GenericBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.GenericBindingList":       schema_catalog_api_catalog_v1alpha1_GenericBindingList(ref),
-		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.GenericBindingSpec":       schema_catalog_api_catalog_v1alpha1_GenericBindingSpec(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.KafkaBinding":             schema_catalog_api_catalog_v1alpha1_KafkaBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.KafkaBindingList":         schema_catalog_api_catalog_v1alpha1_KafkaBindingList(ref),
-		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.KafkaBindingSpec":         schema_catalog_api_catalog_v1alpha1_KafkaBindingSpec(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MSSQLServerBinding":       schema_catalog_api_catalog_v1alpha1_MSSQLServerBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MSSQLServerBindingList":   schema_catalog_api_catalog_v1alpha1_MSSQLServerBindingList(ref),
-		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MSSQLServerBindingSpec":   schema_catalog_api_catalog_v1alpha1_MSSQLServerBindingSpec(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MariaDBBinding":           schema_catalog_api_catalog_v1alpha1_MariaDBBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MariaDBBindingList":       schema_catalog_api_catalog_v1alpha1_MariaDBBindingList(ref),
-		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MariaDBBindingSpec":       schema_catalog_api_catalog_v1alpha1_MariaDBBindingSpec(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MemcachedBinding":         schema_catalog_api_catalog_v1alpha1_MemcachedBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MemcachedBindingList":     schema_catalog_api_catalog_v1alpha1_MemcachedBindingList(ref),
-		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MemcachedBindingSpec":     schema_catalog_api_catalog_v1alpha1_MemcachedBindingSpec(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MongoDBBinding":           schema_catalog_api_catalog_v1alpha1_MongoDBBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MongoDBBindingList":       schema_catalog_api_catalog_v1alpha1_MongoDBBindingList(ref),
-		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MongoDBBindingSpec":       schema_catalog_api_catalog_v1alpha1_MongoDBBindingSpec(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MySQLBinding":             schema_catalog_api_catalog_v1alpha1_MySQLBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MySQLBindingList":         schema_catalog_api_catalog_v1alpha1_MySQLBindingList(ref),
-		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MySQLBindingSpec":         schema_catalog_api_catalog_v1alpha1_MySQLBindingSpec(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.PerconaXtraDBBinding":     schema_catalog_api_catalog_v1alpha1_PerconaXtraDBBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.PerconaXtraDBBindingList": schema_catalog_api_catalog_v1alpha1_PerconaXtraDBBindingList(ref),
-		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.PerconaXtraDBBindingSpec": schema_catalog_api_catalog_v1alpha1_PerconaXtraDBBindingSpec(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.PgBouncerBinding":         schema_catalog_api_catalog_v1alpha1_PgBouncerBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.PgBouncerBindingList":     schema_catalog_api_catalog_v1alpha1_PgBouncerBindingList(ref),
-		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.PgBouncerBindingSpec":     schema_catalog_api_catalog_v1alpha1_PgBouncerBindingSpec(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.PgpoolBinding":            schema_catalog_api_catalog_v1alpha1_PgpoolBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.PgpoolBindingList":        schema_catalog_api_catalog_v1alpha1_PgpoolBindingList(ref),
-		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.PgpoolBindingSpec":        schema_catalog_api_catalog_v1alpha1_PgpoolBindingSpec(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.PostgresBinding":          schema_catalog_api_catalog_v1alpha1_PostgresBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.PostgresBindingList":      schema_catalog_api_catalog_v1alpha1_PostgresBindingList(ref),
-		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.PostgresBindingSpec":      schema_catalog_api_catalog_v1alpha1_PostgresBindingSpec(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ProxySQLBinding":          schema_catalog_api_catalog_v1alpha1_ProxySQLBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ProxySQLBindingList":      schema_catalog_api_catalog_v1alpha1_ProxySQLBindingList(ref),
-		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ProxySQLBindingSpec":      schema_catalog_api_catalog_v1alpha1_ProxySQLBindingSpec(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.RabbitMQBinding":          schema_catalog_api_catalog_v1alpha1_RabbitMQBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.RabbitMQBindingList":      schema_catalog_api_catalog_v1alpha1_RabbitMQBindingList(ref),
-		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.RabbitMQBindingSpec":      schema_catalog_api_catalog_v1alpha1_RabbitMQBindingSpec(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.RedisBinding":             schema_catalog_api_catalog_v1alpha1_RedisBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.RedisBindingList":         schema_catalog_api_catalog_v1alpha1_RedisBindingList(ref),
-		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.RedisBindingSpec":         schema_catalog_api_catalog_v1alpha1_RedisBindingSpec(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.SinglestoreBinding":       schema_catalog_api_catalog_v1alpha1_SinglestoreBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.SinglestoreBindingList":   schema_catalog_api_catalog_v1alpha1_SinglestoreBindingList(ref),
-		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.SinglestoreBindingSpec":   schema_catalog_api_catalog_v1alpha1_SinglestoreBindingSpec(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.SolrBinding":              schema_catalog_api_catalog_v1alpha1_SolrBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.SolrBindingList":          schema_catalog_api_catalog_v1alpha1_SolrBindingList(ref),
-		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.SolrBindingSpec":          schema_catalog_api_catalog_v1alpha1_SolrBindingSpec(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ZooKeeperBinding":         schema_catalog_api_catalog_v1alpha1_ZooKeeperBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ZooKeeperBindingList":     schema_catalog_api_catalog_v1alpha1_ZooKeeperBindingList(ref),
-		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ZooKeeperBindingSpec":     schema_catalog_api_catalog_v1alpha1_ZooKeeperBindingSpec(ref),
 		"k8s.io/api/apps/v1.ControllerRevision":                                     schema_k8sio_api_apps_v1_ControllerRevision(ref),
 		"k8s.io/api/apps/v1.ControllerRevisionList":                                 schema_k8sio_api_apps_v1_ControllerRevisionList(ref),
 		"k8s.io/api/apps/v1.DaemonSet":                                              schema_k8sio_api_apps_v1_DaemonSet(ref),
@@ -432,6 +412,29 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 	}
 }
 
+func schema_catalog_api_catalog_v1alpha1_BindingSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "BindingSpec defines the desired state of Binding",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"sourceRef": {
+						SchemaProps: spec.SchemaProps{
+							Description: "SourceRef refers to the source app instance.",
+							Default:     map[string]interface{}{},
+							Ref:         ref("kmodules.xyz/client-go/api/v1.ObjectReference"),
+						},
+					},
+				},
+				Required: []string{"sourceRef"},
+			},
+		},
+		Dependencies: []string{
+			"kmodules.xyz/client-go/api/v1.ObjectReference"},
+	}
+}
+
 func schema_catalog_api_catalog_v1alpha1_BindingStatus(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -520,7 +523,7 @@ func schema_catalog_api_catalog_v1alpha1_ClickHouseBinding(ref common.ReferenceC
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ClickHouseBindingSpec"),
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
 						},
 					},
 					"status": {
@@ -533,7 +536,7 @@ func schema_catalog_api_catalog_v1alpha1_ClickHouseBinding(ref common.ReferenceC
 			},
 		},
 		Dependencies: []string{
-			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ClickHouseBindingSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -586,29 +589,6 @@ func schema_catalog_api_catalog_v1alpha1_ClickHouseBindingList(ref common.Refere
 	}
 }
 
-func schema_catalog_api_catalog_v1alpha1_ClickHouseBindingSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "ClickHouseBindingSpec defines the desired state of ClickHouseBinding",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"sourceRef": {
-						SchemaProps: spec.SchemaProps{
-							Description: "SourceRef refers to the source app instance.",
-							Default:     map[string]interface{}{},
-							Ref:         ref("kmodules.xyz/client-go/api/v1.ObjectReference"),
-						},
-					},
-				},
-				Required: []string{"sourceRef"},
-			},
-		},
-		Dependencies: []string{
-			"kmodules.xyz/client-go/api/v1.ObjectReference"},
-	}
-}
-
 func schema_catalog_api_catalog_v1alpha1_DruidBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -639,7 +619,7 @@ func schema_catalog_api_catalog_v1alpha1_DruidBinding(ref common.ReferenceCallba
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.DruidBindingSpec"),
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
 						},
 					},
 					"status": {
@@ -652,7 +632,7 @@ func schema_catalog_api_catalog_v1alpha1_DruidBinding(ref common.ReferenceCallba
 			},
 		},
 		Dependencies: []string{
-			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.DruidBindingSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -705,29 +685,6 @@ func schema_catalog_api_catalog_v1alpha1_DruidBindingList(ref common.ReferenceCa
 	}
 }
 
-func schema_catalog_api_catalog_v1alpha1_DruidBindingSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "DruidBindingSpec defines the desired state of DruidBinding",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"sourceRef": {
-						SchemaProps: spec.SchemaProps{
-							Description: "SourceRef refers to the source app instance.",
-							Default:     map[string]interface{}{},
-							Ref:         ref("kmodules.xyz/client-go/api/v1.ObjectReference"),
-						},
-					},
-				},
-				Required: []string{"sourceRef"},
-			},
-		},
-		Dependencies: []string{
-			"kmodules.xyz/client-go/api/v1.ObjectReference"},
-	}
-}
-
 func schema_catalog_api_catalog_v1alpha1_ElasticsearchBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -758,7 +715,7 @@ func schema_catalog_api_catalog_v1alpha1_ElasticsearchBinding(ref common.Referen
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ElasticsearchBindingSpec"),
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
 						},
 					},
 					"status": {
@@ -771,7 +728,7 @@ func schema_catalog_api_catalog_v1alpha1_ElasticsearchBinding(ref common.Referen
 			},
 		},
 		Dependencies: []string{
-			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ElasticsearchBindingSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -824,29 +781,6 @@ func schema_catalog_api_catalog_v1alpha1_ElasticsearchBindingList(ref common.Ref
 	}
 }
 
-func schema_catalog_api_catalog_v1alpha1_ElasticsearchBindingSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "ElasticsearchBindingSpec defines the desired state of ElasticsearchBinding",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"sourceRef": {
-						SchemaProps: spec.SchemaProps{
-							Description: "SourceRef refers to the source app instance.",
-							Default:     map[string]interface{}{},
-							Ref:         ref("kmodules.xyz/client-go/api/v1.ObjectReference"),
-						},
-					},
-				},
-				Required: []string{"sourceRef"},
-			},
-		},
-		Dependencies: []string{
-			"kmodules.xyz/client-go/api/v1.ObjectReference"},
-	}
-}
-
 func schema_catalog_api_catalog_v1alpha1_FerretDBBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -877,7 +811,7 @@ func schema_catalog_api_catalog_v1alpha1_FerretDBBinding(ref common.ReferenceCal
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.FerretDBBindingSpec"),
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
 						},
 					},
 					"status": {
@@ -890,7 +824,7 @@ func schema_catalog_api_catalog_v1alpha1_FerretDBBinding(ref common.ReferenceCal
 			},
 		},
 		Dependencies: []string{
-			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.FerretDBBindingSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -943,29 +877,6 @@ func schema_catalog_api_catalog_v1alpha1_FerretDBBindingList(ref common.Referenc
 	}
 }
 
-func schema_catalog_api_catalog_v1alpha1_FerretDBBindingSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "FerretDBBindingSpec defines the desired state of FerretDBBinding",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"sourceRef": {
-						SchemaProps: spec.SchemaProps{
-							Description: "SourceRef refers to the source app instance.",
-							Default:     map[string]interface{}{},
-							Ref:         ref("kmodules.xyz/client-go/api/v1.ObjectReference"),
-						},
-					},
-				},
-				Required: []string{"sourceRef"},
-			},
-		},
-		Dependencies: []string{
-			"kmodules.xyz/client-go/api/v1.ObjectReference"},
-	}
-}
-
 func schema_catalog_api_catalog_v1alpha1_GenericBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -996,7 +907,7 @@ func schema_catalog_api_catalog_v1alpha1_GenericBinding(ref common.ReferenceCall
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.GenericBindingSpec"),
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
 						},
 					},
 					"status": {
@@ -1009,7 +920,7 @@ func schema_catalog_api_catalog_v1alpha1_GenericBinding(ref common.ReferenceCall
 			},
 		},
 		Dependencies: []string{
-			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.GenericBindingSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -1062,29 +973,6 @@ func schema_catalog_api_catalog_v1alpha1_GenericBindingList(ref common.Reference
 	}
 }
 
-func schema_catalog_api_catalog_v1alpha1_GenericBindingSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "GenericBindingSpec defines the desired state of GenericBinding",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"sourceRef": {
-						SchemaProps: spec.SchemaProps{
-							Description: "SourceRef refers to the source app instance.",
-							Default:     map[string]interface{}{},
-							Ref:         ref("kmodules.xyz/client-go/api/v1.ObjectReference"),
-						},
-					},
-				},
-				Required: []string{"sourceRef"},
-			},
-		},
-		Dependencies: []string{
-			"kmodules.xyz/client-go/api/v1.ObjectReference"},
-	}
-}
-
 func schema_catalog_api_catalog_v1alpha1_KafkaBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -1115,7 +1003,7 @@ func schema_catalog_api_catalog_v1alpha1_KafkaBinding(ref common.ReferenceCallba
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.KafkaBindingSpec"),
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
 						},
 					},
 					"status": {
@@ -1128,7 +1016,7 @@ func schema_catalog_api_catalog_v1alpha1_KafkaBinding(ref common.ReferenceCallba
 			},
 		},
 		Dependencies: []string{
-			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.KafkaBindingSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -1181,29 +1069,6 @@ func schema_catalog_api_catalog_v1alpha1_KafkaBindingList(ref common.ReferenceCa
 	}
 }
 
-func schema_catalog_api_catalog_v1alpha1_KafkaBindingSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "KafkaBindingSpec defines the desired state of KafkaBinding",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"sourceRef": {
-						SchemaProps: spec.SchemaProps{
-							Description: "SourceRef refers to the source app instance.",
-							Default:     map[string]interface{}{},
-							Ref:         ref("kmodules.xyz/client-go/api/v1.ObjectReference"),
-						},
-					},
-				},
-				Required: []string{"sourceRef"},
-			},
-		},
-		Dependencies: []string{
-			"kmodules.xyz/client-go/api/v1.ObjectReference"},
-	}
-}
-
 func schema_catalog_api_catalog_v1alpha1_MSSQLServerBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -1234,7 +1099,7 @@ func schema_catalog_api_catalog_v1alpha1_MSSQLServerBinding(ref common.Reference
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MSSQLServerBindingSpec"),
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
 						},
 					},
 					"status": {
@@ -1247,7 +1112,7 @@ func schema_catalog_api_catalog_v1alpha1_MSSQLServerBinding(ref common.Reference
 			},
 		},
 		Dependencies: []string{
-			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MSSQLServerBindingSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -1300,29 +1165,6 @@ func schema_catalog_api_catalog_v1alpha1_MSSQLServerBindingList(ref common.Refer
 	}
 }
 
-func schema_catalog_api_catalog_v1alpha1_MSSQLServerBindingSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "MSSQLServerBindingSpec defines the desired state of MSSQLServerBinding",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"sourceRef": {
-						SchemaProps: spec.SchemaProps{
-							Description: "SourceRef refers to the source app instance.",
-							Default:     map[string]interface{}{},
-							Ref:         ref("kmodules.xyz/client-go/api/v1.ObjectReference"),
-						},
-					},
-				},
-				Required: []string{"sourceRef"},
-			},
-		},
-		Dependencies: []string{
-			"kmodules.xyz/client-go/api/v1.ObjectReference"},
-	}
-}
-
 func schema_catalog_api_catalog_v1alpha1_MariaDBBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -1353,7 +1195,7 @@ func schema_catalog_api_catalog_v1alpha1_MariaDBBinding(ref common.ReferenceCall
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MariaDBBindingSpec"),
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
 						},
 					},
 					"status": {
@@ -1366,7 +1208,7 @@ func schema_catalog_api_catalog_v1alpha1_MariaDBBinding(ref common.ReferenceCall
 			},
 		},
 		Dependencies: []string{
-			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MariaDBBindingSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -1419,29 +1261,6 @@ func schema_catalog_api_catalog_v1alpha1_MariaDBBindingList(ref common.Reference
 	}
 }
 
-func schema_catalog_api_catalog_v1alpha1_MariaDBBindingSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "MariaDBBindingSpec defines the desired state of MariaDBBinding",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"sourceRef": {
-						SchemaProps: spec.SchemaProps{
-							Description: "SourceRef refers to the source app instance.",
-							Default:     map[string]interface{}{},
-							Ref:         ref("kmodules.xyz/client-go/api/v1.ObjectReference"),
-						},
-					},
-				},
-				Required: []string{"sourceRef"},
-			},
-		},
-		Dependencies: []string{
-			"kmodules.xyz/client-go/api/v1.ObjectReference"},
-	}
-}
-
 func schema_catalog_api_catalog_v1alpha1_MemcachedBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -1472,7 +1291,7 @@ func schema_catalog_api_catalog_v1alpha1_MemcachedBinding(ref common.ReferenceCa
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MemcachedBindingSpec"),
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
 						},
 					},
 					"status": {
@@ -1485,7 +1304,7 @@ func schema_catalog_api_catalog_v1alpha1_MemcachedBinding(ref common.ReferenceCa
 			},
 		},
 		Dependencies: []string{
-			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MemcachedBindingSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -1538,29 +1357,6 @@ func schema_catalog_api_catalog_v1alpha1_MemcachedBindingList(ref common.Referen
 	}
 }
 
-func schema_catalog_api_catalog_v1alpha1_MemcachedBindingSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "MemcachedBindingSpec defines the desired state of MemcachedBinding",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"sourceRef": {
-						SchemaProps: spec.SchemaProps{
-							Description: "SourceRef refers to the source app instance.",
-							Default:     map[string]interface{}{},
-							Ref:         ref("kmodules.xyz/client-go/api/v1.ObjectReference"),
-						},
-					},
-				},
-				Required: []string{"sourceRef"},
-			},
-		},
-		Dependencies: []string{
-			"kmodules.xyz/client-go/api/v1.ObjectReference"},
-	}
-}
-
 func schema_catalog_api_catalog_v1alpha1_MongoDBBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -1591,7 +1387,7 @@ func schema_catalog_api_catalog_v1alpha1_MongoDBBinding(ref common.ReferenceCall
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MongoDBBindingSpec"),
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
 						},
 					},
 					"status": {
@@ -1604,7 +1400,7 @@ func schema_catalog_api_catalog_v1alpha1_MongoDBBinding(ref common.ReferenceCall
 			},
 		},
 		Dependencies: []string{
-			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MongoDBBindingSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -1657,29 +1453,6 @@ func schema_catalog_api_catalog_v1alpha1_MongoDBBindingList(ref common.Reference
 	}
 }
 
-func schema_catalog_api_catalog_v1alpha1_MongoDBBindingSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "MongoDBBindingSpec defines the desired state of MongoDBBinding",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"sourceRef": {
-						SchemaProps: spec.SchemaProps{
-							Description: "SourceRef refers to the source app instance.",
-							Default:     map[string]interface{}{},
-							Ref:         ref("kmodules.xyz/client-go/api/v1.ObjectReference"),
-						},
-					},
-				},
-				Required: []string{"sourceRef"},
-			},
-		},
-		Dependencies: []string{
-			"kmodules.xyz/client-go/api/v1.ObjectReference"},
-	}
-}
-
 func schema_catalog_api_catalog_v1alpha1_MySQLBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -1710,7 +1483,7 @@ func schema_catalog_api_catalog_v1alpha1_MySQLBinding(ref common.ReferenceCallba
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MySQLBindingSpec"),
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
 						},
 					},
 					"status": {
@@ -1723,7 +1496,7 @@ func schema_catalog_api_catalog_v1alpha1_MySQLBinding(ref common.ReferenceCallba
 			},
 		},
 		Dependencies: []string{
-			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MySQLBindingSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -1776,29 +1549,6 @@ func schema_catalog_api_catalog_v1alpha1_MySQLBindingList(ref common.ReferenceCa
 	}
 }
 
-func schema_catalog_api_catalog_v1alpha1_MySQLBindingSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "MySQLBindingSpec defines the desired state of MySQLBinding",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"sourceRef": {
-						SchemaProps: spec.SchemaProps{
-							Description: "SourceRef refers to the source app instance.",
-							Default:     map[string]interface{}{},
-							Ref:         ref("kmodules.xyz/client-go/api/v1.ObjectReference"),
-						},
-					},
-				},
-				Required: []string{"sourceRef"},
-			},
-		},
-		Dependencies: []string{
-			"kmodules.xyz/client-go/api/v1.ObjectReference"},
-	}
-}
-
 func schema_catalog_api_catalog_v1alpha1_PerconaXtraDBBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -1829,7 +1579,7 @@ func schema_catalog_api_catalog_v1alpha1_PerconaXtraDBBinding(ref common.Referen
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.PerconaXtraDBBindingSpec"),
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
 						},
 					},
 					"status": {
@@ -1842,7 +1592,7 @@ func schema_catalog_api_catalog_v1alpha1_PerconaXtraDBBinding(ref common.Referen
 			},
 		},
 		Dependencies: []string{
-			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.PerconaXtraDBBindingSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -1895,29 +1645,6 @@ func schema_catalog_api_catalog_v1alpha1_PerconaXtraDBBindingList(ref common.Ref
 	}
 }
 
-func schema_catalog_api_catalog_v1alpha1_PerconaXtraDBBindingSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "PerconaXtraDBBindingSpec defines the desired state of PerconaXtraDBBinding",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"sourceRef": {
-						SchemaProps: spec.SchemaProps{
-							Description: "SourceRef refers to the source app instance.",
-							Default:     map[string]interface{}{},
-							Ref:         ref("kmodules.xyz/client-go/api/v1.ObjectReference"),
-						},
-					},
-				},
-				Required: []string{"sourceRef"},
-			},
-		},
-		Dependencies: []string{
-			"kmodules.xyz/client-go/api/v1.ObjectReference"},
-	}
-}
-
 func schema_catalog_api_catalog_v1alpha1_PgBouncerBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -1948,7 +1675,7 @@ func schema_catalog_api_catalog_v1alpha1_PgBouncerBinding(ref common.ReferenceCa
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.PgBouncerBindingSpec"),
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
 						},
 					},
 					"status": {
@@ -1961,7 +1688,7 @@ func schema_catalog_api_catalog_v1alpha1_PgBouncerBinding(ref common.ReferenceCa
 			},
 		},
 		Dependencies: []string{
-			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.PgBouncerBindingSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -2014,29 +1741,6 @@ func schema_catalog_api_catalog_v1alpha1_PgBouncerBindingList(ref common.Referen
 	}
 }
 
-func schema_catalog_api_catalog_v1alpha1_PgBouncerBindingSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "PgBouncerBindingSpec defines the desired state of PgBouncerBinding",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"sourceRef": {
-						SchemaProps: spec.SchemaProps{
-							Description: "SourceRef refers to the source app instance.",
-							Default:     map[string]interface{}{},
-							Ref:         ref("kmodules.xyz/client-go/api/v1.ObjectReference"),
-						},
-					},
-				},
-				Required: []string{"sourceRef"},
-			},
-		},
-		Dependencies: []string{
-			"kmodules.xyz/client-go/api/v1.ObjectReference"},
-	}
-}
-
 func schema_catalog_api_catalog_v1alpha1_PgpoolBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -2067,7 +1771,7 @@ func schema_catalog_api_catalog_v1alpha1_PgpoolBinding(ref common.ReferenceCallb
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.PgpoolBindingSpec"),
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
 						},
 					},
 					"status": {
@@ -2080,7 +1784,7 @@ func schema_catalog_api_catalog_v1alpha1_PgpoolBinding(ref common.ReferenceCallb
 			},
 		},
 		Dependencies: []string{
-			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.PgpoolBindingSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -2133,29 +1837,6 @@ func schema_catalog_api_catalog_v1alpha1_PgpoolBindingList(ref common.ReferenceC
 	}
 }
 
-func schema_catalog_api_catalog_v1alpha1_PgpoolBindingSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "PgpoolBindingSpec defines the desired state of PgpoolBinding",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"sourceRef": {
-						SchemaProps: spec.SchemaProps{
-							Description: "SourceRef refers to the source app instance.",
-							Default:     map[string]interface{}{},
-							Ref:         ref("kmodules.xyz/client-go/api/v1.ObjectReference"),
-						},
-					},
-				},
-				Required: []string{"sourceRef"},
-			},
-		},
-		Dependencies: []string{
-			"kmodules.xyz/client-go/api/v1.ObjectReference"},
-	}
-}
-
 func schema_catalog_api_catalog_v1alpha1_PostgresBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -2186,7 +1867,7 @@ func schema_catalog_api_catalog_v1alpha1_PostgresBinding(ref common.ReferenceCal
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.PostgresBindingSpec"),
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
 						},
 					},
 					"status": {
@@ -2199,7 +1880,7 @@ func schema_catalog_api_catalog_v1alpha1_PostgresBinding(ref common.ReferenceCal
 			},
 		},
 		Dependencies: []string{
-			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.PostgresBindingSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -2252,29 +1933,6 @@ func schema_catalog_api_catalog_v1alpha1_PostgresBindingList(ref common.Referenc
 	}
 }
 
-func schema_catalog_api_catalog_v1alpha1_PostgresBindingSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "PostgresBindingSpec defines the desired state of PostgresBinding",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"sourceRef": {
-						SchemaProps: spec.SchemaProps{
-							Description: "SourceRef refers to the source app instance.",
-							Default:     map[string]interface{}{},
-							Ref:         ref("kmodules.xyz/client-go/api/v1.ObjectReference"),
-						},
-					},
-				},
-				Required: []string{"sourceRef"},
-			},
-		},
-		Dependencies: []string{
-			"kmodules.xyz/client-go/api/v1.ObjectReference"},
-	}
-}
-
 func schema_catalog_api_catalog_v1alpha1_ProxySQLBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -2305,7 +1963,7 @@ func schema_catalog_api_catalog_v1alpha1_ProxySQLBinding(ref common.ReferenceCal
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ProxySQLBindingSpec"),
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
 						},
 					},
 					"status": {
@@ -2318,7 +1976,7 @@ func schema_catalog_api_catalog_v1alpha1_ProxySQLBinding(ref common.ReferenceCal
 			},
 		},
 		Dependencies: []string{
-			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ProxySQLBindingSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -2371,29 +2029,6 @@ func schema_catalog_api_catalog_v1alpha1_ProxySQLBindingList(ref common.Referenc
 	}
 }
 
-func schema_catalog_api_catalog_v1alpha1_ProxySQLBindingSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "ProxySQLBindingSpec defines the desired state of ProxySQLBinding",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"sourceRef": {
-						SchemaProps: spec.SchemaProps{
-							Description: "SourceRef refers to the source app instance.",
-							Default:     map[string]interface{}{},
-							Ref:         ref("kmodules.xyz/client-go/api/v1.ObjectReference"),
-						},
-					},
-				},
-				Required: []string{"sourceRef"},
-			},
-		},
-		Dependencies: []string{
-			"kmodules.xyz/client-go/api/v1.ObjectReference"},
-	}
-}
-
 func schema_catalog_api_catalog_v1alpha1_RabbitMQBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -2424,7 +2059,7 @@ func schema_catalog_api_catalog_v1alpha1_RabbitMQBinding(ref common.ReferenceCal
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.RabbitMQBindingSpec"),
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
 						},
 					},
 					"status": {
@@ -2437,7 +2072,7 @@ func schema_catalog_api_catalog_v1alpha1_RabbitMQBinding(ref common.ReferenceCal
 			},
 		},
 		Dependencies: []string{
-			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.RabbitMQBindingSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -2490,29 +2125,6 @@ func schema_catalog_api_catalog_v1alpha1_RabbitMQBindingList(ref common.Referenc
 	}
 }
 
-func schema_catalog_api_catalog_v1alpha1_RabbitMQBindingSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "RabbitMQBindingSpec defines the desired state of RabbitMQBinding",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"sourceRef": {
-						SchemaProps: spec.SchemaProps{
-							Description: "SourceRef refers to the source app instance.",
-							Default:     map[string]interface{}{},
-							Ref:         ref("kmodules.xyz/client-go/api/v1.ObjectReference"),
-						},
-					},
-				},
-				Required: []string{"sourceRef"},
-			},
-		},
-		Dependencies: []string{
-			"kmodules.xyz/client-go/api/v1.ObjectReference"},
-	}
-}
-
 func schema_catalog_api_catalog_v1alpha1_RedisBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -2543,7 +2155,7 @@ func schema_catalog_api_catalog_v1alpha1_RedisBinding(ref common.ReferenceCallba
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.RedisBindingSpec"),
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
 						},
 					},
 					"status": {
@@ -2556,7 +2168,7 @@ func schema_catalog_api_catalog_v1alpha1_RedisBinding(ref common.ReferenceCallba
 			},
 		},
 		Dependencies: []string{
-			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.RedisBindingSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -2609,29 +2221,6 @@ func schema_catalog_api_catalog_v1alpha1_RedisBindingList(ref common.ReferenceCa
 	}
 }
 
-func schema_catalog_api_catalog_v1alpha1_RedisBindingSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "RedisBindingSpec defines the desired state of RedisBinding",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"sourceRef": {
-						SchemaProps: spec.SchemaProps{
-							Description: "SourceRef refers to the source app instance.",
-							Default:     map[string]interface{}{},
-							Ref:         ref("kmodules.xyz/client-go/api/v1.ObjectReference"),
-						},
-					},
-				},
-				Required: []string{"sourceRef"},
-			},
-		},
-		Dependencies: []string{
-			"kmodules.xyz/client-go/api/v1.ObjectReference"},
-	}
-}
-
 func schema_catalog_api_catalog_v1alpha1_SinglestoreBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -2662,7 +2251,7 @@ func schema_catalog_api_catalog_v1alpha1_SinglestoreBinding(ref common.Reference
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.SinglestoreBindingSpec"),
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
 						},
 					},
 					"status": {
@@ -2675,7 +2264,7 @@ func schema_catalog_api_catalog_v1alpha1_SinglestoreBinding(ref common.Reference
 			},
 		},
 		Dependencies: []string{
-			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.SinglestoreBindingSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -2728,29 +2317,6 @@ func schema_catalog_api_catalog_v1alpha1_SinglestoreBindingList(ref common.Refer
 	}
 }
 
-func schema_catalog_api_catalog_v1alpha1_SinglestoreBindingSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "SinglestoreBindingSpec defines the desired state of SinglestoreBinding",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"sourceRef": {
-						SchemaProps: spec.SchemaProps{
-							Description: "SourceRef refers to the source app instance.",
-							Default:     map[string]interface{}{},
-							Ref:         ref("kmodules.xyz/client-go/api/v1.ObjectReference"),
-						},
-					},
-				},
-				Required: []string{"sourceRef"},
-			},
-		},
-		Dependencies: []string{
-			"kmodules.xyz/client-go/api/v1.ObjectReference"},
-	}
-}
-
 func schema_catalog_api_catalog_v1alpha1_SolrBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -2781,7 +2347,7 @@ func schema_catalog_api_catalog_v1alpha1_SolrBinding(ref common.ReferenceCallbac
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.SolrBindingSpec"),
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
 						},
 					},
 					"status": {
@@ -2794,7 +2360,7 @@ func schema_catalog_api_catalog_v1alpha1_SolrBinding(ref common.ReferenceCallbac
 			},
 		},
 		Dependencies: []string{
-			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.SolrBindingSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -2847,29 +2413,6 @@ func schema_catalog_api_catalog_v1alpha1_SolrBindingList(ref common.ReferenceCal
 	}
 }
 
-func schema_catalog_api_catalog_v1alpha1_SolrBindingSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "SolrBindingSpec defines the desired state of SolrBinding",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"sourceRef": {
-						SchemaProps: spec.SchemaProps{
-							Description: "SourceRef refers to the source app instance.",
-							Default:     map[string]interface{}{},
-							Ref:         ref("kmodules.xyz/client-go/api/v1.ObjectReference"),
-						},
-					},
-				},
-				Required: []string{"sourceRef"},
-			},
-		},
-		Dependencies: []string{
-			"kmodules.xyz/client-go/api/v1.ObjectReference"},
-	}
-}
-
 func schema_catalog_api_catalog_v1alpha1_ZooKeeperBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -2900,7 +2443,7 @@ func schema_catalog_api_catalog_v1alpha1_ZooKeeperBinding(ref common.ReferenceCa
 					"spec": {
 						SchemaProps: spec.SchemaProps{
 							Default: map[string]interface{}{},
-							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ZooKeeperBindingSpec"),
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
 						},
 					},
 					"status": {
@@ -2913,7 +2456,7 @@ func schema_catalog_api_catalog_v1alpha1_ZooKeeperBinding(ref common.ReferenceCa
 			},
 		},
 		Dependencies: []string{
-			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ZooKeeperBindingSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
@@ -2963,29 +2506,6 @@ func schema_catalog_api_catalog_v1alpha1_ZooKeeperBindingList(ref common.Referen
 		},
 		Dependencies: []string{
 			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ZooKeeperBinding", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
-	}
-}
-
-func schema_catalog_api_catalog_v1alpha1_ZooKeeperBindingSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
-	return common.OpenAPIDefinition{
-		Schema: spec.Schema{
-			SchemaProps: spec.SchemaProps{
-				Description: "ZooKeeperBindingSpec defines the desired state of ZooKeeperBinding",
-				Type:        []string{"object"},
-				Properties: map[string]spec.Schema{
-					"sourceRef": {
-						SchemaProps: spec.SchemaProps{
-							Description: "SourceRef refers to the source app instance.",
-							Default:     map[string]interface{}{},
-							Ref:         ref("kmodules.xyz/client-go/api/v1.ObjectReference"),
-						},
-					},
-				},
-				Required: []string{"sourceRef"},
-			},
-		},
-		Dependencies: []string{
-			"kmodules.xyz/client-go/api/v1.ObjectReference"},
 	}
 }
 
