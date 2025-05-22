@@ -59,6 +59,10 @@ spec:
           spec:
             description: BindingSpec defines the desired state of Binding
             properties:
+              exposeUI:
+                description: ExposeUI decides whether the ui should be exposed or
+                  not
+                type: boolean
               sourceRef:
                 description: SourceRef refers to the source app instance.
                 properties:
@@ -76,6 +80,7 @@ spec:
                 - name
                 type: object
             required:
+            - exposeUI
             - sourceRef
             type: object
           status:
