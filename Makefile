@@ -84,7 +84,7 @@ generate: controller-gen ## Generate code containing DeepCopy, DeepCopyInto, and
 	@$(MAKE) openapi
 
 # https://github.com/appscodelabs/gengo-builder
-CODE_GENERATOR_IMAGE ?= ghcr.io/appscode/gengo:release-1.29
+CODE_GENERATOR_IMAGE ?= ghcr.io/appscode/gengo:release-1.32
 DOCKER_REPO_ROOT     := /go/src/$(GO_PKG)/$(REPO)
 API_GROUPS           ?= catalog:v1alpha1 gateway:v1alpha1
 
