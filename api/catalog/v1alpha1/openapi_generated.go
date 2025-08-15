@@ -434,8 +434,16 @@ func schema_catalog_api_catalog_v1alpha1_BindingSpec(ref common.ReferenceCallbac
 							Ref:         ref("kmodules.xyz/client-go/api/v1.ObjectReference"),
 						},
 					},
+					"exposeUI": {
+						SchemaProps: spec.SchemaProps{
+							Description: "ExposeUI decides whether the ui should be exposed or not",
+							Default:     false,
+							Type:        []string{"boolean"},
+							Format:      "",
+						},
+					},
 				},
-				Required: []string{"sourceRef"},
+				Required: []string{"sourceRef", "exposeUI"},
 			},
 		},
 		Dependencies: []string{
