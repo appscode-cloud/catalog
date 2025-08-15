@@ -1,25 +1,23 @@
 module go.bytebuilders.dev/catalog
 
-go 1.23.6
-
-toolchain go1.24.1
+go 1.24.3
 
 require (
-	github.com/envoyproxy/gateway v1.3.2
+	github.com/envoyproxy/gateway v1.3.3
 	github.com/google/gofuzz v1.2.0
 	k8s.io/api v0.32.3
 	k8s.io/apimachinery v0.32.3
 	k8s.io/klog/v2 v2.130.1
 	k8s.io/kube-openapi v0.0.0-20250318172550-b98be4ee1595
-	kmodules.xyz/client-go v0.32.1
+	kmodules.xyz/client-go v0.32.7
 	kmodules.xyz/offshoot-api v0.32.0
-	kmodules.xyz/resource-metadata v0.26.1
+	kmodules.xyz/resource-metadata v0.33.1
 	kubeops.dev/external-dns-operator v0.0.9
-	kubevault.dev/apimachinery v0.20.0
-	sigs.k8s.io/controller-runtime v0.20.3
-	sigs.k8s.io/gateway-api v1.2.1
+	kubevault.dev/apimachinery v0.22.0
+	sigs.k8s.io/controller-runtime v0.20.4
+	sigs.k8s.io/gateway-api v1.3.0
 	sigs.k8s.io/yaml v1.4.0
-	voyagermesh.dev/installer v0.0.0-20250324192020-20a3d86540ee
+	voyagermesh.dev/installer v0.0.0-20250815090459-579f372f6f6e
 )
 
 require (
@@ -48,7 +46,7 @@ require (
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/google/btree v1.1.3 // indirect
 	github.com/google/gnostic-models v0.6.9 // indirect
-	github.com/google/go-cmp v0.6.0 // indirect
+	github.com/google/go-cmp v0.7.0 // indirect
 	github.com/google/go-containerregistry v0.20.3 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/huandu/xstrings v1.5.0 // indirect
@@ -83,16 +81,16 @@ require (
 	github.com/yudai/gojsondiff v1.0.0 // indirect
 	github.com/yudai/golcs v0.0.0-20170316035057-ecda9a501e82 // indirect
 	github.com/zeebo/xxh3 v1.0.2 // indirect
-	golang.org/x/crypto v0.36.0 // indirect
-	golang.org/x/net v0.37.0 // indirect
+	golang.org/x/crypto v0.37.0 // indirect
+	golang.org/x/net v0.39.0 // indirect
 	golang.org/x/oauth2 v0.27.0 // indirect
-	golang.org/x/sync v0.12.0 // indirect
-	golang.org/x/sys v0.31.0 // indirect
-	golang.org/x/term v0.30.0 // indirect
-	golang.org/x/text v0.23.0 // indirect
+	golang.org/x/sync v0.13.0 // indirect
+	golang.org/x/sys v0.32.0 // indirect
+	golang.org/x/term v0.31.0 // indirect
+	golang.org/x/text v0.24.0 // indirect
 	golang.org/x/time v0.10.0 // indirect
 	gomodules.xyz/jsonpatch/v2 v2.5.0 // indirect
-	google.golang.org/protobuf v1.36.3 // indirect
+	google.golang.org/protobuf v1.36.6 // indirect
 	gopkg.in/evanphx/json-patch.v4 v4.12.0 // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
@@ -103,7 +101,7 @@ require (
 	kmodules.xyz/go-containerregistry v0.0.14 // indirect
 	sigs.k8s.io/json v0.0.0-20241014173422-cfa47c3a1cc8 // indirect
 	sigs.k8s.io/randfill v1.0.0 // indirect
-	sigs.k8s.io/structured-merge-diff/v4 v4.6.0 // indirect
+	sigs.k8s.io/structured-merge-diff/v4 v4.7.0 // indirect
 	x-helm.dev/apimachinery v0.0.17 // indirect
 )
 
