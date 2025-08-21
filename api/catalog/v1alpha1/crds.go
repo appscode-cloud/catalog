@@ -22,6 +22,10 @@ import (
 	"kmodules.xyz/client-go/apiextensions"
 )
 
+func (_ ClickHouseBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
+	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceClickHouseBindings))
+}
+
 func (_ DruidBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
 	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceDruidBindings))
 }
