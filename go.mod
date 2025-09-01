@@ -15,9 +15,9 @@ require (
 	kubeops.dev/external-dns-operator v0.0.9
 	kubevault.dev/apimachinery v0.22.0
 	sigs.k8s.io/controller-runtime v0.20.4
-	sigs.k8s.io/gateway-api v1.3.0
+	sigs.k8s.io/gateway-api v1.2.1
 	sigs.k8s.io/yaml v1.4.0
-	voyagermesh.dev/installer v0.0.0-20250815090459-579f372f6f6e
+	voyagermesh.dev/installer v0.0.0-20250831101200-3368908a554f
 )
 
 require (

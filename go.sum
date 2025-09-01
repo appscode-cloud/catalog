@@ -280,8 +280,8 @@ kubevault.dev/apimachinery v0.22.0 h1:6ysCHgKe0Sw2z35UkpiA8xfWwsGMmzpLEw6RDp5HF/
 kubevault.dev/apimachinery v0.22.0/go.mod h1:QArlKB79Ho4PauRS2ioX4FEVjF79EbwAaomXhkLC/Hk=
 sigs.k8s.io/controller-runtime v0.20.4 h1:X3c+Odnxz+iPTRobG4tp092+CvBU9UK0t/bRf+n0DGU=
 sigs.k8s.io/controller-runtime v0.20.4/go.mod h1:xg2XB0K5ShQzAgsoujxuKN4LNXR2LfwwHsPj7Iaw+XY=
-sigs.k8s.io/gateway-api v1.3.0 h1:q6okN+/UKDATola4JY7zXzx40WO4VISk7i9DIfOvr9M=
-sigs.k8s.io/gateway-api v1.3.0/go.mod h1:d8NV8nJbaRbEKem+5IuxkL8gJGOZ+FJ+NvOIltV8gDk=
+sigs.k8s.io/gateway-api v1.2.1 h1:fZZ/+RyRb+Y5tGkwxFKuYuSRQHu9dZtbjenblleOLHM=
+sigs.k8s.io/gateway-api v1.2.1/go.mod h1:EpNfEXNjiYfUJypf0eZ0P5iXA9ekSGWaS1WgPaM42X0=
 sigs.k8s.io/json v0.0.0-20241014173422-cfa47c3a1cc8 h1:gBQPwqORJ8d8/YNZWEjoZs7npUVDpVXUUOFfW6CgAqE=
 sigs.k8s.io/json v0.0.0-20241014173422-cfa47c3a1cc8/go.mod h1:mdzfpAEoE6DHQEN0uh9ZbOCuHbLK5wOm7dK4ctXE9Tg=
 sigs.k8s.io/randfill v0.0.0-20250304075658-069ef1bbf016/go.mod h1:XeLlZ/jmk4i1HRopwe7/aU3H5n1zNUcX6TM94b3QxOY=
@@ -291,7 +291,7 @@ sigs.k8s.io/structured-merge-diff/v4 v4.7.0 h1:qPeWmscJcXP0snki5IYF79Z8xrl8ETFxg
 sigs.k8s.io/structured-merge-diff/v4 v4.7.0/go.mod h1:dDy58f92j70zLsuZVuUX5Wp9vtxXpaZnkPGWeqDfCps=
 sigs.k8s.io/yaml v1.4.0 h1:Mk1wCc2gy/F0THH0TAp1QYyJNzRm2KCLy3o5ASXVI5E=
 sigs.k8s.io/yaml v1.4.0/go.mod h1:Ejl7/uTz7PSA4eKMyQCUTnhZYNmLIl+5c2lQPGR2BPY=
-voyagermesh.dev/installer v0.0.0-20250815090459-579f372f6f6e h1:lipndMXAP/nVTiFTfZrViUIBCjEw8w9j1YLBFCqXxvI=
-voyagermesh.dev/installer v0.0.0-20250815090459-579f372f6f6e/go.mod h1:nC3ieuMp1TJQPyFOMZAag00rxS04NF9Ci95LxTQvpaM=
+voyagermesh.dev/installer v0.0.0-20250831101200-3368908a554f h1:YuGidi0qisGt2fcb95yo25PLTIgEeNWtkKliH/LgOfk=
+voyagermesh.dev/installer v0.0.0-20250831101200-3368908a554f/go.mod h1:nC3ieuMp1TJQPyFOMZAag00rxS04NF9Ci95LxTQvpaM=
 x-helm.dev/apimachinery v0.0.17 h1:CeaLYYboErzhv7cO0zWdhA3diRe1cAHbeolJWuKhtxo=
 x-helm.dev/apimachinery v0.0.17/go.mod h1:Ki8vHsakYIAXh8X4VeTq0cMZnpROiAnayZeEKLUjotk=

@@ -133,7 +133,7 @@ type RouteGroupKind = v1.RouteGroupKind
 
 // GatewayAddress describes an address that can be bound to a Gateway.
 // +k8s:deepcopy-gen=false
-type GatewaySpecAddress = v1.GatewaySpecAddress
+type GatewayAddress = v1.GatewayAddress
 
 // GatewayStatus defines the observed state of Gateway.
 // +k8s:deepcopy-gen=false
