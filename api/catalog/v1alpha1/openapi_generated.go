@@ -49,6 +49,8 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.FerretDBBindingList":      schema_catalog_api_catalog_v1alpha1_FerretDBBindingList(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.GenericBinding":           schema_catalog_api_catalog_v1alpha1_GenericBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.GenericBindingList":       schema_catalog_api_catalog_v1alpha1_GenericBindingList(ref),
+		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.HazelcastBinding":         schema_catalog_api_catalog_v1alpha1_HazelcastBinding(ref),
+		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.HazelcastBindingList":     schema_catalog_api_catalog_v1alpha1_HazelcastBindingList(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.KafkaBinding":             schema_catalog_api_catalog_v1alpha1_KafkaBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.KafkaBindingList":         schema_catalog_api_catalog_v1alpha1_KafkaBindingList(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MSSQLServerBinding":       schema_catalog_api_catalog_v1alpha1_MSSQLServerBinding(ref),
@@ -1076,6 +1078,102 @@ func schema_catalog_api_catalog_v1alpha1_GenericBindingList(ref common.Reference
 		},
 		Dependencies: []string{
 			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.GenericBinding", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+	}
+}
+
+func schema_catalog_api_catalog_v1alpha1_HazelcastBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "HazelcastBinding is the Schema for the hazelcastbindings API",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"),
+						},
+					},
+					"spec": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
+						},
+					},
+					"status": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus"),
+						},
+					},
+				},
+			},
+		},
+		Dependencies: []string{
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+	}
+}
+
+func schema_catalog_api_catalog_v1alpha1_HazelcastBindingList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "HazelcastBindingList contains a list of HazelcastBinding",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"),
+						},
+					},
+					"items": {
+						SchemaProps: spec.SchemaProps{
+							Type: []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: map[string]interface{}{},
+										Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.HazelcastBinding"),
+									},
+								},
+							},
+						},
+					},
+				},
+				Required: []string{"items"},
+			},
+		},
+		Dependencies: []string{
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.HazelcastBinding", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
