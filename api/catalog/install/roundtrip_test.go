@@ -17,8 +17,9 @@ limitations under the License.
 package install
 
 import (
-	"go.bytebuilders.dev/catalog/api/catalog/fuzzer"
 	"testing"
+
+	"go.bytebuilders.dev/catalog/api/catalog/fuzzer"
 
 	"k8s.io/apimachinery/pkg/api/apitesting/roundtrip"
 )
