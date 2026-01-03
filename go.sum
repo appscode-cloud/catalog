@@ -300,8 +300,8 @@ kmodules.xyz/resource-metadata v0.40.2 h1:2J+UvAaHXfqDStO2SKqeVkER4z/kSOqpj8Iyrc
 kmodules.xyz/resource-metadata v0.40.2/go.mod h1:38+41aUSrWqrQDeaSITKoxAiGT0ysQk5yjRODqBadpw=
 kmodules.xyz/schema-checker v0.4.2 h1:tAbxEtM759GxDM/3sQi/+OKKwUsEF+Ih4KReV3Eb/Xw=
 kmodules.xyz/schema-checker v0.4.2/go.mod h1:N7ETPwfY4LbTHbydC9jjssPmYKKgZ8DC0IuLCU55wwc=
-kubeops.dev/external-dns-operator v0.2.1-0.20251228040338-45d730f27b11 h1:21JnTETaspCtQa/tDXOaQ4AjpTglmxTctSrHDGsUKh0=
-kubeops.dev/external-dns-operator v0.2.1-0.20251228040338-45d730f27b11/go.mod h1:lbb7HiWX3O+pXlrC59lD5EtnDTx+3Agw6ADEF2vkeNk=
+kubeops.dev/external-dns-operator v0.3.0 h1:KIWX0C+5en8levhkdlM9htZ+EsowIWm9mgLTdsJYUzo=
+kubeops.dev/external-dns-operator v0.3.0/go.mod h1:hJgsshVGN68A4eXPjGYCuKaWLgYbaYFCD9E+vydYJoE=
 kubevault.dev/apimachinery v0.22.0 h1:6ysCHgKe0Sw2z35UkpiA8xfWwsGMmzpLEw6RDp5HF/k=
 kubevault.dev/apimachinery v0.22.0/go.mod h1:QArlKB79Ho4PauRS2ioX4FEVjF79EbwAaomXhkLC/Hk=
 sigs.k8s.io/controller-runtime v0.22.4 h1:GEjV7KV3TY8e+tJ2LCTxUTanW4z/FmNB7l327UfMq9A=
@@ -316,7 +316,7 @@ sigs.k8s.io/structured-merge-diff/v6 v6.3.0 h1:jTijUJbW353oVOd9oTlifJqOGEkUw2jB/
 sigs.k8s.io/structured-merge-diff/v6 v6.3.0/go.mod h1:M3W8sfWvn2HhQDIbGWj3S099YozAsymCo/wrT5ohRUE=
 sigs.k8s.io/yaml v1.6.0 h1:G8fkbMSAFqgEFgh4b1wmtzDnioxFCUgTZhlbj5P9QYs=
 sigs.k8s.io/yaml v1.6.0/go.mod h1:796bPqUfzR/0jLAl6XjHl3Ck7MiyVv8dbTdyT3/pMf4=
-voyagermesh.dev/installer v0.0.0-20250831101200-3368908a554f h1:YuGidi0qisGt2fcb95yo25PLTIgEeNWtkKliH/LgOfk=
-voyagermesh.dev/installer v0.0.0-20250831101200-3368908a554f/go.mod h1:nC3ieuMp1TJQPyFOMZAag00rxS04NF9Ci95LxTQvpaM=
+voyagermesh.dev/installer v0.0.0-20251230080904-cdc0a2148b57 h1:qcVUlFsLB6qg6qq+Z1U6KtXlby+L5St3O9yFpcxt1m0=
+voyagermesh.dev/installer v0.0.0-20251230080904-cdc0a2148b57/go.mod h1:e1DWSADBi9bkcJjH6AEJtDwfeRDli8u8f5aMOBCh47I=
 x-helm.dev/apimachinery v0.0.18 h1:UHrC0PGjeSRSRECXRaVUl4fIIwwyQSnNFCCAevSI14w=
 x-helm.dev/apimachinery v0.0.18/go.mod h1:C+M2A9cVmNhqP6ZGft4opUm1cPiWLHukKV5kWNkzXZs=

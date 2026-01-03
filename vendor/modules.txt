@@ -857,7 +857,7 @@ kmodules.xyz/resource-metadata/apis/shared
 kmodules.xyz/resource-metadata/apis/ui
 kmodules.xyz/resource-metadata/apis/ui/v1alpha1
 kmodules.xyz/resource-metadata/crds
-# kubeops.dev/external-dns-operator v0.2.1-0.20251228040338-45d730f27b11
+# kubeops.dev/external-dns-operator v0.3.0
 ## explicit; go 1.25
 kubeops.dev/external-dns-operator/apis/external
 kubeops.dev/external-dns-operator/apis/external/v1alpha1
@@ -931,8 +931,8 @@ sigs.k8s.io/structured-merge-diff/v6/value
 # sigs.k8s.io/yaml v1.6.0
 ## explicit; go 1.22
 sigs.k8s.io/yaml
-# voyagermesh.dev/installer v0.0.0-20250831101200-3368908a554f
-## explicit; go 1.23.0
+# voyagermesh.dev/installer v0.0.0-20251230080904-cdc0a2148b57
+## explicit; go 1.24.0
 voyagermesh.dev/installer/apis/installer
 voyagermesh.dev/installer/apis/installer/v1alpha1
 # x-helm.dev/apimachinery v0.0.18
