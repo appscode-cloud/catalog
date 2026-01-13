@@ -3,7 +3,7 @@ module go.bytebuilders.dev/catalog
 go 1.25.3
 
 require (
-	github.com/envoyproxy/gateway v1.6.1
+	github.com/envoyproxy/gateway v1.6.2
 	k8s.io/api v0.34.3
 	k8s.io/apimachinery v0.34.3
 	k8s.io/klog/v2 v2.130.1
@@ -14,7 +14,7 @@ require (
 	kubeops.dev/external-dns-operator v0.3.0
 	kubevault.dev/apimachinery v0.22.0
 	sigs.k8s.io/controller-runtime v0.22.4
-	sigs.k8s.io/gateway-api v1.4.0
+	sigs.k8s.io/gateway-api v1.4.1
 	sigs.k8s.io/randfill v1.0.0
 	sigs.k8s.io/yaml v1.6.0
 	voyagermesh.dev/installer v0.0.0-20251230080904-cdc0a2148b57
