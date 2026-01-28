@@ -73,6 +73,8 @@ const (
 type BindingSpec struct {
 	// SourceRef refers to the source app instance.
 	SourceRef kmapi.ObjectReference `json:"sourceRef"`
+	// ExposeUI decides whether the ui should be exposed or not
+	ExposeUI bool `json:"exposeUI"`
 }
 
 // +kubebuilder:validation:Enum=Pending;InProgress;Terminating;Current;Failed;Expired
