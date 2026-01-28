@@ -9325,6 +9325,23 @@ spec:
                 required:
                 - enabled
                 type: object
+              global:
+                properties:
+                  distro:
+                    properties:
+                      openshift:
+                        type: boolean
+                      ubi:
+                        enum:
+                        - all
+                        - catalog
+                        - operator
+                        type: string
+                    required:
+                    - openshift
+                    - ubi
+                    type: object
+                type: object
               infra:
                 properties:
                   dns:
@@ -9496,6 +9513,7 @@ spec:
             - envoy
             - gateway
             - gateway-dns
+            - global
             - infra
             type: object
         type: object
