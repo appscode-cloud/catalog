@@ -10,14 +10,14 @@ require (
 	k8s.io/kube-openapi v0.0.0-20250910181357-589584f1c912
 	kmodules.xyz/client-go v0.34.3
 	kmodules.xyz/offshoot-api v0.34.0
-	kmodules.xyz/resource-metadata v0.42.9
+	kmodules.xyz/resource-metadata v0.42.10
 	kubeops.dev/external-dns-operator v0.3.0
-	kubevault.dev/apimachinery v0.22.0
+	kubevault.dev/apimachinery v0.24.0
 	sigs.k8s.io/controller-runtime v0.22.4
 	sigs.k8s.io/gateway-api v1.4.1
 	sigs.k8s.io/randfill v1.0.0
 	sigs.k8s.io/yaml v1.6.0
-	voyagermesh.dev/installer v0.0.0-20260306095111-0be6484ed3c8
+	voyagermesh.dev/installer v0.0.0-20260311084402-0a1bb5665734
 )
 
 require (
@@ -63,7 +63,7 @@ require (
 	github.com/huandu/xstrings v1.5.0 // indirect
 	github.com/imdario/mergo v0.3.16 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
-	github.com/klauspost/compress v1.18.1 // indirect
+	github.com/klauspost/compress v1.18.2 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.5 // indirect
 	github.com/mitchellh/copystructure v1.2.0 // indirect
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
