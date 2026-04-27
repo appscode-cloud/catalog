@@ -17,7 +17,7 @@ require (
 	sigs.k8s.io/gateway-api v1.4.1
 	sigs.k8s.io/randfill v1.0.0
 	sigs.k8s.io/yaml v1.6.0
-	voyagermesh.dev/installer v0.0.0-20260422083412-9fb2b415ba60
+	voyagermesh.dev/installer v0.0.0-20260427124054-e6fbf86716f0
 )
 
 require (
