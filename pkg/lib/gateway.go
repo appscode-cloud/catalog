@@ -23,13 +23,13 @@ import (
 
 	egv1a1 "github.com/envoyproxy/gateway/api/v1alpha1"
 	catgwapi "go.bytebuilders.dev/catalog/api/gateway/v1alpha1"
-	"gopkg.in/yaml.v2"
 	core "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/klog/v2"
 	kmapi "kmodules.xyz/client-go/api/v1"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	gwv1 "sigs.k8s.io/gateway-api/apis/v1"
+	"sigs.k8s.io/yaml"
 )
 
 func FindGatewayClass(ctx context.Context, kc client.Client, bindingNamespace string) (*gwv1.GatewayClass, error) {
