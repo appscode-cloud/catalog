@@ -14,6 +14,46 @@ resources:
     namespaced: true
   domain: appscode.com
   group: catalog
+  kind: AerospikeBinding
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
+  group: catalog
+  kind: CassandraBinding
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
+  group: catalog
+  kind: ClickHouseBinding
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
+  group: catalog
+  kind: DB2Binding
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
+  group: catalog
+  kind: DocumentDBBinding
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
+  group: catalog
   kind: DruidBinding
   path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
   version: v1alpha1
@@ -31,6 +71,30 @@ resources:
   domain: appscode.com
   group: catalog
   kind: FerretDBBinding
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
+  group: catalog
+  kind: HanaDBBinding
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
+  group: catalog
+  kind: HazelcastBinding
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
+  group: catalog
+  kind: IgniteBinding
   path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
   version: v1alpha1
 - api:
@@ -62,6 +126,14 @@ resources:
     namespaced: true
   domain: appscode.com
   group: catalog
+  kind: MilvusBinding
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
+  group: catalog
   kind: MSSQLServerBinding
   path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
   version: v1alpha1
@@ -79,6 +151,22 @@ resources:
   domain: appscode.com
   group: catalog
   kind: MySQLBinding
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
+  group: catalog
+  kind: Neo4jBinding
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
+  group: catalog
+  kind: OracleBinding
   path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
   version: v1alpha1
 - api:
@@ -126,6 +214,14 @@ resources:
     namespaced: true
   domain: appscode.com
   group: catalog
+  kind: QdrantBinding
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
+  group: catalog
   kind: RabbitMQBinding
   path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
   version: v1alpha1
@@ -151,6 +247,14 @@ resources:
   domain: appscode.com
   group: catalog
   kind: SolrBinding
+  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: appscode.com
+  group: catalog
+  kind: WeaviateBinding
   path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
   version: v1alpha1
 - api:

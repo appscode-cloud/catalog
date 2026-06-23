@@ -35,12 +35,18 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
+		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.AerospikeBinding":         schema_catalog_api_catalog_v1alpha1_AerospikeBinding(ref),
+		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.AerospikeBindingList":     schema_catalog_api_catalog_v1alpha1_AerospikeBindingList(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec":              schema_catalog_api_catalog_v1alpha1_BindingSpec(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus":            schema_catalog_api_catalog_v1alpha1_BindingStatus(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.CassandraBinding":         schema_catalog_api_catalog_v1alpha1_CassandraBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.CassandraBindingList":     schema_catalog_api_catalog_v1alpha1_CassandraBindingList(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ClickHouseBinding":        schema_catalog_api_catalog_v1alpha1_ClickHouseBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ClickHouseBindingList":    schema_catalog_api_catalog_v1alpha1_ClickHouseBindingList(ref),
+		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.DB2Binding":               schema_catalog_api_catalog_v1alpha1_DB2Binding(ref),
+		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.DB2BindingList":           schema_catalog_api_catalog_v1alpha1_DB2BindingList(ref),
+		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.DocumentDBBinding":        schema_catalog_api_catalog_v1alpha1_DocumentDBBinding(ref),
+		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.DocumentDBBindingList":    schema_catalog_api_catalog_v1alpha1_DocumentDBBindingList(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.DruidBinding":             schema_catalog_api_catalog_v1alpha1_DruidBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.DruidBindingList":         schema_catalog_api_catalog_v1alpha1_DruidBindingList(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ElasticsearchBinding":     schema_catalog_api_catalog_v1alpha1_ElasticsearchBinding(ref),
@@ -49,8 +55,12 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.FerretDBBindingList":      schema_catalog_api_catalog_v1alpha1_FerretDBBindingList(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.GenericBinding":           schema_catalog_api_catalog_v1alpha1_GenericBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.GenericBindingList":       schema_catalog_api_catalog_v1alpha1_GenericBindingList(ref),
+		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.HanaDBBinding":            schema_catalog_api_catalog_v1alpha1_HanaDBBinding(ref),
+		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.HanaDBBindingList":        schema_catalog_api_catalog_v1alpha1_HanaDBBindingList(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.HazelcastBinding":         schema_catalog_api_catalog_v1alpha1_HazelcastBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.HazelcastBindingList":     schema_catalog_api_catalog_v1alpha1_HazelcastBindingList(ref),
+		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.IgniteBinding":            schema_catalog_api_catalog_v1alpha1_IgniteBinding(ref),
+		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.IgniteBindingList":        schema_catalog_api_catalog_v1alpha1_IgniteBindingList(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.KafkaBinding":             schema_catalog_api_catalog_v1alpha1_KafkaBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.KafkaBindingList":         schema_catalog_api_catalog_v1alpha1_KafkaBindingList(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MSSQLServerBinding":       schema_catalog_api_catalog_v1alpha1_MSSQLServerBinding(ref),
@@ -59,10 +69,14 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MariaDBBindingList":       schema_catalog_api_catalog_v1alpha1_MariaDBBindingList(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MemcachedBinding":         schema_catalog_api_catalog_v1alpha1_MemcachedBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MemcachedBindingList":     schema_catalog_api_catalog_v1alpha1_MemcachedBindingList(ref),
+		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MilvusBinding":            schema_catalog_api_catalog_v1alpha1_MilvusBinding(ref),
+		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MilvusBindingList":        schema_catalog_api_catalog_v1alpha1_MilvusBindingList(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MongoDBBinding":           schema_catalog_api_catalog_v1alpha1_MongoDBBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MongoDBBindingList":       schema_catalog_api_catalog_v1alpha1_MongoDBBindingList(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MySQLBinding":             schema_catalog_api_catalog_v1alpha1_MySQLBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MySQLBindingList":         schema_catalog_api_catalog_v1alpha1_MySQLBindingList(ref),
+		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.Neo4jBinding":             schema_catalog_api_catalog_v1alpha1_Neo4jBinding(ref),
+		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.Neo4jBindingList":         schema_catalog_api_catalog_v1alpha1_Neo4jBindingList(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.OracleBinding":            schema_catalog_api_catalog_v1alpha1_OracleBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.OracleBindingList":        schema_catalog_api_catalog_v1alpha1_OracleBindingList(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.PerconaXtraDBBinding":     schema_catalog_api_catalog_v1alpha1_PerconaXtraDBBinding(ref),
@@ -75,6 +89,8 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.PostgresBindingList":      schema_catalog_api_catalog_v1alpha1_PostgresBindingList(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ProxySQLBinding":          schema_catalog_api_catalog_v1alpha1_ProxySQLBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ProxySQLBindingList":      schema_catalog_api_catalog_v1alpha1_ProxySQLBindingList(ref),
+		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.QdrantBinding":            schema_catalog_api_catalog_v1alpha1_QdrantBinding(ref),
+		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.QdrantBindingList":        schema_catalog_api_catalog_v1alpha1_QdrantBindingList(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.RabbitMQBinding":          schema_catalog_api_catalog_v1alpha1_RabbitMQBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.RabbitMQBindingList":      schema_catalog_api_catalog_v1alpha1_RabbitMQBindingList(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.RedisBinding":             schema_catalog_api_catalog_v1alpha1_RedisBinding(ref),
@@ -84,6 +100,8 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.SolrBinding":              schema_catalog_api_catalog_v1alpha1_SolrBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.SolrBindingList":          schema_catalog_api_catalog_v1alpha1_SolrBindingList(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.UIExposureSpec":           schema_catalog_api_catalog_v1alpha1_UIExposureSpec(ref),
+		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.WeaviateBinding":          schema_catalog_api_catalog_v1alpha1_WeaviateBinding(ref),
+		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.WeaviateBindingList":      schema_catalog_api_catalog_v1alpha1_WeaviateBindingList(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ZooKeeperBinding":         schema_catalog_api_catalog_v1alpha1_ZooKeeperBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ZooKeeperBindingList":     schema_catalog_api_catalog_v1alpha1_ZooKeeperBindingList(ref),
 		"k8s.io/api/apps/v1.ControllerRevision":                                     schema_k8sio_api_apps_v1_ControllerRevision(ref),
@@ -434,6 +452,102 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 	}
 }
 
+func schema_catalog_api_catalog_v1alpha1_AerospikeBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "AerospikeBinding is the Schema for the aerospikebindings API",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"),
+						},
+					},
+					"spec": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
+						},
+					},
+					"status": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus"),
+						},
+					},
+				},
+			},
+		},
+		Dependencies: []string{
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+	}
+}
+
+func schema_catalog_api_catalog_v1alpha1_AerospikeBindingList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "AerospikeBindingList contains a list of AerospikeBinding",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"),
+						},
+					},
+					"items": {
+						SchemaProps: spec.SchemaProps{
+							Type: []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: map[string]interface{}{},
+										Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.AerospikeBinding"),
+									},
+								},
+							},
+						},
+					},
+				},
+				Required: []string{"items"},
+			},
+		},
+		Dependencies: []string{
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.AerospikeBinding", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+	}
+}
+
 func schema_catalog_api_catalog_v1alpha1_BindingSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -710,6 +824,198 @@ func schema_catalog_api_catalog_v1alpha1_ClickHouseBindingList(ref common.Refere
 		},
 		Dependencies: []string{
 			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ClickHouseBinding", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+	}
+}
+
+func schema_catalog_api_catalog_v1alpha1_DB2Binding(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "DB2Binding is the Schema for the db2bindings API",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"),
+						},
+					},
+					"spec": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
+						},
+					},
+					"status": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus"),
+						},
+					},
+				},
+			},
+		},
+		Dependencies: []string{
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+	}
+}
+
+func schema_catalog_api_catalog_v1alpha1_DB2BindingList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "DB2BindingList contains a list of DB2Binding",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"),
+						},
+					},
+					"items": {
+						SchemaProps: spec.SchemaProps{
+							Type: []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: map[string]interface{}{},
+										Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.DB2Binding"),
+									},
+								},
+							},
+						},
+					},
+				},
+				Required: []string{"items"},
+			},
+		},
+		Dependencies: []string{
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.DB2Binding", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+	}
+}
+
+func schema_catalog_api_catalog_v1alpha1_DocumentDBBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "DocumentDBBinding is the Schema for the documentdbbindings API",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"),
+						},
+					},
+					"spec": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
+						},
+					},
+					"status": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus"),
+						},
+					},
+				},
+			},
+		},
+		Dependencies: []string{
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+	}
+}
+
+func schema_catalog_api_catalog_v1alpha1_DocumentDBBindingList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "DocumentDBBindingList contains a list of DocumentDBBinding",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"),
+						},
+					},
+					"items": {
+						SchemaProps: spec.SchemaProps{
+							Type: []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: map[string]interface{}{},
+										Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.DocumentDBBinding"),
+									},
+								},
+							},
+						},
+					},
+				},
+				Required: []string{"items"},
+			},
+		},
+		Dependencies: []string{
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.DocumentDBBinding", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -1097,6 +1403,102 @@ func schema_catalog_api_catalog_v1alpha1_GenericBindingList(ref common.Reference
 	}
 }
 
+func schema_catalog_api_catalog_v1alpha1_HanaDBBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "HanaDBBinding is the Schema for the hanadbindings API",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"),
+						},
+					},
+					"spec": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
+						},
+					},
+					"status": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus"),
+						},
+					},
+				},
+			},
+		},
+		Dependencies: []string{
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+	}
+}
+
+func schema_catalog_api_catalog_v1alpha1_HanaDBBindingList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "HanaDBBindingList contains a list of HanaDBBinding",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"),
+						},
+					},
+					"items": {
+						SchemaProps: spec.SchemaProps{
+							Type: []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: map[string]interface{}{},
+										Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.HanaDBBinding"),
+									},
+								},
+							},
+						},
+					},
+				},
+				Required: []string{"items"},
+			},
+		},
+		Dependencies: []string{
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.HanaDBBinding", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+	}
+}
+
 func schema_catalog_api_catalog_v1alpha1_HazelcastBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -1190,6 +1592,102 @@ func schema_catalog_api_catalog_v1alpha1_HazelcastBindingList(ref common.Referen
 		},
 		Dependencies: []string{
 			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.HazelcastBinding", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+	}
+}
+
+func schema_catalog_api_catalog_v1alpha1_IgniteBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "IgniteBinding is the Schema for the ignitebindings API",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"),
+						},
+					},
+					"spec": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
+						},
+					},
+					"status": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus"),
+						},
+					},
+				},
+			},
+		},
+		Dependencies: []string{
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+	}
+}
+
+func schema_catalog_api_catalog_v1alpha1_IgniteBindingList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "IgniteBindingList contains a list of IgniteBinding",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"),
+						},
+					},
+					"items": {
+						SchemaProps: spec.SchemaProps{
+							Type: []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: map[string]interface{}{},
+										Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.IgniteBinding"),
+									},
+								},
+							},
+						},
+					},
+				},
+				Required: []string{"items"},
+			},
+		},
+		Dependencies: []string{
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.IgniteBinding", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -1577,6 +2075,102 @@ func schema_catalog_api_catalog_v1alpha1_MemcachedBindingList(ref common.Referen
 	}
 }
 
+func schema_catalog_api_catalog_v1alpha1_MilvusBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "MilvusBinding is the Schema for the milvusbindings API",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"),
+						},
+					},
+					"spec": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
+						},
+					},
+					"status": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus"),
+						},
+					},
+				},
+			},
+		},
+		Dependencies: []string{
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+	}
+}
+
+func schema_catalog_api_catalog_v1alpha1_MilvusBindingList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "MilvusBindingList contains a list of MilvusBinding",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"),
+						},
+					},
+					"items": {
+						SchemaProps: spec.SchemaProps{
+							Type: []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: map[string]interface{}{},
+										Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MilvusBinding"),
+									},
+								},
+							},
+						},
+					},
+				},
+				Required: []string{"items"},
+			},
+		},
+		Dependencies: []string{
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MilvusBinding", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+	}
+}
+
 func schema_catalog_api_catalog_v1alpha1_MongoDBBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -1766,6 +2360,102 @@ func schema_catalog_api_catalog_v1alpha1_MySQLBindingList(ref common.ReferenceCa
 		},
 		Dependencies: []string{
 			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.MySQLBinding", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+	}
+}
+
+func schema_catalog_api_catalog_v1alpha1_Neo4jBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "Neo4jBinding is the Schema for the neo4jbindings API",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"),
+						},
+					},
+					"spec": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
+						},
+					},
+					"status": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus"),
+						},
+					},
+				},
+			},
+		},
+		Dependencies: []string{
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+	}
+}
+
+func schema_catalog_api_catalog_v1alpha1_Neo4jBindingList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "Neo4jBindingList contains a list of Neo4jBinding",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"),
+						},
+					},
+					"items": {
+						SchemaProps: spec.SchemaProps{
+							Type: []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: map[string]interface{}{},
+										Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.Neo4jBinding"),
+									},
+								},
+							},
+						},
+					},
+				},
+				Required: []string{"items"},
+			},
+		},
+		Dependencies: []string{
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.Neo4jBinding", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
@@ -2345,6 +3035,102 @@ func schema_catalog_api_catalog_v1alpha1_ProxySQLBindingList(ref common.Referenc
 	}
 }
 
+func schema_catalog_api_catalog_v1alpha1_QdrantBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "QdrantBinding is the Schema for the qdrantbindings API",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"),
+						},
+					},
+					"spec": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
+						},
+					},
+					"status": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus"),
+						},
+					},
+				},
+			},
+		},
+		Dependencies: []string{
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+	}
+}
+
+func schema_catalog_api_catalog_v1alpha1_QdrantBindingList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "QdrantBindingList contains a list of QdrantBinding",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"),
+						},
+					},
+					"items": {
+						SchemaProps: spec.SchemaProps{
+							Type: []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: map[string]interface{}{},
+										Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.QdrantBinding"),
+									},
+								},
+							},
+						},
+					},
+				},
+				Required: []string{"items"},
+			},
+		},
+		Dependencies: []string{
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.QdrantBinding", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+	}
+}
+
 func schema_catalog_api_catalog_v1alpha1_RabbitMQBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
@@ -2753,6 +3539,102 @@ func schema_catalog_api_catalog_v1alpha1_UIExposureSpec(ref common.ReferenceCall
 				Required: []string{"disableUI", "disableCostEfficiency"},
 			},
 		},
+	}
+}
+
+func schema_catalog_api_catalog_v1alpha1_WeaviateBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "WeaviateBinding is the Schema for the weaviatebindings API",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"),
+						},
+					},
+					"spec": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
+						},
+					},
+					"status": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus"),
+						},
+					},
+				},
+			},
+		},
+		Dependencies: []string{
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+	}
+}
+
+func schema_catalog_api_catalog_v1alpha1_WeaviateBindingList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "WeaviateBindingList contains a list of WeaviateBinding",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"),
+						},
+					},
+					"items": {
+						SchemaProps: spec.SchemaProps{
+							Type: []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: map[string]interface{}{},
+										Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.WeaviateBinding"),
+									},
+								},
+							},
+						},
+					},
+				},
+				Required: []string{"items"},
+			},
+		},
+		Dependencies: []string{
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.WeaviateBinding", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
