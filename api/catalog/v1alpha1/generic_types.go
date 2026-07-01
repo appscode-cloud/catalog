@@ -232,6 +232,15 @@ func (dst *GenericBinding) Duckify(srcRaw runtime.Object) error {
 		dst.Spec.SourceRef = src.Spec.SourceRef
 		dst.Status = src.Status
 		return nil
+	case *QdrantBinding:
+		dst.TypeMeta = metav1.TypeMeta{
+			APIVersion: GroupVersion.String(),
+			Kind:       ResourceKindQdrantBinding,
+		}
+		dst.ObjectMeta = src.ObjectMeta
+		dst.Spec.SourceRef = src.Spec.SourceRef
+		dst.Status = src.Status
+		return nil
 	case *RabbitMQBinding:
 		dst.TypeMeta = metav1.TypeMeta{
 			APIVersion: GroupVersion.String(),

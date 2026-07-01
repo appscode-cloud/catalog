@@ -94,6 +94,10 @@ func (ProxySQLBinding) CustomResourceDefinition() *apiextensions.CustomResourceD
 	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceProxySQLBindings))
 }
 
+func (QdrantBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
+	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceQdrantBindings))
+}
+
 func (RabbitMQBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
 	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceRabbitMQBindings))
 }

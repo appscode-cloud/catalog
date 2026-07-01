@@ -75,6 +75,8 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.PostgresBindingList":      schema_catalog_api_catalog_v1alpha1_PostgresBindingList(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ProxySQLBinding":          schema_catalog_api_catalog_v1alpha1_ProxySQLBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ProxySQLBindingList":      schema_catalog_api_catalog_v1alpha1_ProxySQLBindingList(ref),
+		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.QdrantBinding":            schema_catalog_api_catalog_v1alpha1_QdrantBinding(ref),
+		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.QdrantBindingList":        schema_catalog_api_catalog_v1alpha1_QdrantBindingList(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.RabbitMQBinding":          schema_catalog_api_catalog_v1alpha1_RabbitMQBinding(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.RabbitMQBindingList":      schema_catalog_api_catalog_v1alpha1_RabbitMQBindingList(ref),
 		"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.RedisBinding":             schema_catalog_api_catalog_v1alpha1_RedisBinding(ref),
@@ -2342,6 +2344,102 @@ func schema_catalog_api_catalog_v1alpha1_ProxySQLBindingList(ref common.Referenc
 		},
 		Dependencies: []string{
 			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.ProxySQLBinding", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
+	}
+}
+
+func schema_catalog_api_catalog_v1alpha1_QdrantBinding(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "QdrantBinding is the Schema for the qdrantbindings API",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"),
+						},
+					},
+					"spec": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec"),
+						},
+					},
+					"status": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus"),
+						},
+					},
+				},
+			},
+		},
+		Dependencies: []string{
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingSpec", "go.bytebuilders.dev/catalog/api/catalog/v1alpha1.BindingStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+	}
+}
+
+func schema_catalog_api_catalog_v1alpha1_QdrantBindingList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	return common.OpenAPIDefinition{
+		Schema: spec.Schema{
+			SchemaProps: spec.SchemaProps{
+				Description: "QdrantBindingList contains a list of QdrantBinding",
+				Type:        []string{"object"},
+				Properties: map[string]spec.Schema{
+					"kind": {
+						SchemaProps: spec.SchemaProps{
+							Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"apiVersion": {
+						SchemaProps: spec.SchemaProps{
+							Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+							Type:        []string{"string"},
+							Format:      "",
+						},
+					},
+					"metadata": {
+						SchemaProps: spec.SchemaProps{
+							Default: map[string]interface{}{},
+							Ref:     ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"),
+						},
+					},
+					"items": {
+						SchemaProps: spec.SchemaProps{
+							Type: []string{"array"},
+							Items: &spec.SchemaOrArray{
+								Schema: &spec.Schema{
+									SchemaProps: spec.SchemaProps{
+										Default: map[string]interface{}{},
+										Ref:     ref("go.bytebuilders.dev/catalog/api/catalog/v1alpha1.QdrantBinding"),
+									},
+								},
+							},
+						},
+					},
+				},
+				Required: []string{"items"},
+			},
+		},
+		Dependencies: []string{
+			"go.bytebuilders.dev/catalog/api/catalog/v1alpha1.QdrantBinding", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"},
 	}
 }
 
