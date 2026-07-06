@@ -50,10 +50,6 @@ func (ElasticsearchBinding) CustomResourceDefinition() *apiextensions.CustomReso
 	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceElasticsearchBindings))
 }
 
-func (FerretDBBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
-	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceFerretDBBindings))
-}
-
 func (HanaDBBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
 	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceHanaDBBindings))
 }

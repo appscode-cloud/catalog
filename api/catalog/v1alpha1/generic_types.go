@@ -133,15 +133,6 @@ func (dst *GenericBinding) Duckify(srcRaw runtime.Object) error {
 		dst.Spec.SourceRef = src.Spec.SourceRef
 		dst.Status = src.Status
 		return nil
-	case *FerretDBBinding:
-		dst.TypeMeta = metav1.TypeMeta{
-			APIVersion: GroupVersion.String(),
-			Kind:       ResourceKindFerretDBBinding,
-		}
-		dst.ObjectMeta = src.ObjectMeta
-		dst.Spec.SourceRef = src.Spec.SourceRef
-		dst.Status = src.Status
-		return nil
 	case *HanaDBBinding:
 		dst.TypeMeta = metav1.TypeMeta{
 			APIVersion: GroupVersion.String(),
