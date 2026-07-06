@@ -70,14 +70,6 @@ resources:
     namespaced: true
   domain: appscode.com
   group: catalog
-  kind: FerretDBBinding
-  path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
-  version: v1alpha1
-- api:
-    crdVersion: v1
-    namespaced: true
-  domain: appscode.com
-  group: catalog
   kind: HanaDBBinding
   path: go.bytebuilders.dev/catalog/api/catalog/v1alpha1
   version: v1alpha1

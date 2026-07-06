@@ -22,12 +22,24 @@ import (
 	"kmodules.xyz/client-go/apiextensions"
 )
 
+func (AerospikeBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
+	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceAerospikeBindings))
+}
+
 func (CassandraBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
 	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceCassandraBindings))
 }
 
 func (ClickHouseBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
 	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceClickHouseBindings))
+}
+
+func (DB2Binding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
+	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceDB2Bindings))
+}
+
+func (DocumentDBBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
+	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceDocumentDBBindings))
 }
 
 func (DruidBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
@@ -38,12 +50,16 @@ func (ElasticsearchBinding) CustomResourceDefinition() *apiextensions.CustomReso
 	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceElasticsearchBindings))
 }
 
-func (FerretDBBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
-	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceFerretDBBindings))
+func (HanaDBBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
+	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceHanaDBBindings))
 }
 
 func (HazelcastBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
 	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceHazelcastBindings))
+}
+
+func (IgniteBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
+	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceIgniteBindings))
 }
 
 func (KafkaBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
@@ -58,16 +74,24 @@ func (MemcachedBinding) CustomResourceDefinition() *apiextensions.CustomResource
 	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceMemcachedBindings))
 }
 
-func (MSSQLServerBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
-	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceMSSQLServerBindings))
+func (MilvusBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
+	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceMilvusBindings))
 }
 
 func (MongoDBBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
 	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceMongoDBBindings))
 }
 
+func (MSSQLServerBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
+	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceMSSQLServerBindings))
+}
+
 func (MySQLBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
 	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceMySQLBindings))
+}
+
+func (Neo4jBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
+	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceNeo4jBindings))
 }
 
 func (OracleBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
@@ -94,6 +118,10 @@ func (ProxySQLBinding) CustomResourceDefinition() *apiextensions.CustomResourceD
 	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceProxySQLBindings))
 }
 
+func (QdrantBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
+	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceQdrantBindings))
+}
+
 func (RabbitMQBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
 	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceRabbitMQBindings))
 }
@@ -108,6 +136,10 @@ func (SinglestoreBinding) CustomResourceDefinition() *apiextensions.CustomResour
 
 func (SolrBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
 	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceSolrBindings))
+}
+
+func (WeaviateBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
+	return crds.MustCustomResourceDefinition(GroupVersion.WithResource(ResourceWeaviateBindings))
 }
 
 func (ZooKeeperBinding) CustomResourceDefinition() *apiextensions.CustomResourceDefinition {
