@@ -70,6 +70,15 @@ func (in *GenericBinding) SetConditions(conditions kmapi.Conditions) {
 
 func (dst *GenericBinding) Duckify(srcRaw runtime.Object) error {
 	switch src := srcRaw.(type) {
+	case *AerospikeBinding:
+		dst.TypeMeta = metav1.TypeMeta{
+			APIVersion: GroupVersion.String(),
+			Kind:       ResourceKindAerospikeBinding,
+		}
+		dst.ObjectMeta = src.ObjectMeta
+		dst.Spec.SourceRef = src.Spec.SourceRef
+		dst.Status = src.Status
+		return nil
 	case *CassandraBinding:
 		dst.TypeMeta = metav1.TypeMeta{
 			APIVersion: GroupVersion.String(),
@@ -83,6 +92,24 @@ func (dst *GenericBinding) Duckify(srcRaw runtime.Object) error {
 		dst.TypeMeta = metav1.TypeMeta{
 			APIVersion: GroupVersion.String(),
 			Kind:       ResourceKindClickHouseBinding,
+		}
+		dst.ObjectMeta = src.ObjectMeta
+		dst.Spec.SourceRef = src.Spec.SourceRef
+		dst.Status = src.Status
+		return nil
+	case *DB2Binding:
+		dst.TypeMeta = metav1.TypeMeta{
+			APIVersion: GroupVersion.String(),
+			Kind:       ResourceKindDB2Binding,
+		}
+		dst.ObjectMeta = src.ObjectMeta
+		dst.Spec.SourceRef = src.Spec.SourceRef
+		dst.Status = src.Status
+		return nil
+	case *DocumentDBBinding:
+		dst.TypeMeta = metav1.TypeMeta{
+			APIVersion: GroupVersion.String(),
+			Kind:       ResourceKindDocumentDBBinding,
 		}
 		dst.ObjectMeta = src.ObjectMeta
 		dst.Spec.SourceRef = src.Spec.SourceRef
@@ -115,10 +142,28 @@ func (dst *GenericBinding) Duckify(srcRaw runtime.Object) error {
 		dst.Spec.SourceRef = src.Spec.SourceRef
 		dst.Status = src.Status
 		return nil
+	case *HanaDBBinding:
+		dst.TypeMeta = metav1.TypeMeta{
+			APIVersion: GroupVersion.String(),
+			Kind:       ResourceKindHanaDBBinding,
+		}
+		dst.ObjectMeta = src.ObjectMeta
+		dst.Spec.SourceRef = src.Spec.SourceRef
+		dst.Status = src.Status
+		return nil
 	case *HazelcastBinding:
 		dst.TypeMeta = metav1.TypeMeta{
 			APIVersion: GroupVersion.String(),
 			Kind:       ResourceKindHazelcastBinding,
+		}
+		dst.ObjectMeta = src.ObjectMeta
+		dst.Spec.SourceRef = src.Spec.SourceRef
+		dst.Status = src.Status
+		return nil
+	case *IgniteBinding:
+		dst.TypeMeta = metav1.TypeMeta{
+			APIVersion: GroupVersion.String(),
+			Kind:       ResourceKindIgniteBinding,
 		}
 		dst.ObjectMeta = src.ObjectMeta
 		dst.Spec.SourceRef = src.Spec.SourceRef
@@ -151,10 +196,10 @@ func (dst *GenericBinding) Duckify(srcRaw runtime.Object) error {
 		dst.Spec.SourceRef = src.Spec.SourceRef
 		dst.Status = src.Status
 		return nil
-	case *MSSQLServerBinding:
+	case *MilvusBinding:
 		dst.TypeMeta = metav1.TypeMeta{
 			APIVersion: GroupVersion.String(),
-			Kind:       ResourceKindMSSQLServerBinding,
+			Kind:       ResourceKindMilvusBinding,
 		}
 		dst.ObjectMeta = src.ObjectMeta
 		dst.Spec.SourceRef = src.Spec.SourceRef
@@ -169,10 +214,28 @@ func (dst *GenericBinding) Duckify(srcRaw runtime.Object) error {
 		dst.Spec.SourceRef = src.Spec.SourceRef
 		dst.Status = src.Status
 		return nil
+	case *MSSQLServerBinding:
+		dst.TypeMeta = metav1.TypeMeta{
+			APIVersion: GroupVersion.String(),
+			Kind:       ResourceKindMSSQLServerBinding,
+		}
+		dst.ObjectMeta = src.ObjectMeta
+		dst.Spec.SourceRef = src.Spec.SourceRef
+		dst.Status = src.Status
+		return nil
 	case *MySQLBinding:
 		dst.TypeMeta = metav1.TypeMeta{
 			APIVersion: GroupVersion.String(),
 			Kind:       ResourceKindMySQLBinding,
+		}
+		dst.ObjectMeta = src.ObjectMeta
+		dst.Spec.SourceRef = src.Spec.SourceRef
+		dst.Status = src.Status
+		return nil
+	case *Neo4jBinding:
+		dst.TypeMeta = metav1.TypeMeta{
+			APIVersion: GroupVersion.String(),
+			Kind:       ResourceKindNeo4jBinding,
 		}
 		dst.ObjectMeta = src.ObjectMeta
 		dst.Spec.SourceRef = src.Spec.SourceRef
@@ -232,6 +295,15 @@ func (dst *GenericBinding) Duckify(srcRaw runtime.Object) error {
 		dst.Spec.SourceRef = src.Spec.SourceRef
 		dst.Status = src.Status
 		return nil
+	case *QdrantBinding:
+		dst.TypeMeta = metav1.TypeMeta{
+			APIVersion: GroupVersion.String(),
+			Kind:       ResourceKindQdrantBinding,
+		}
+		dst.ObjectMeta = src.ObjectMeta
+		dst.Spec.SourceRef = src.Spec.SourceRef
+		dst.Status = src.Status
+		return nil
 	case *RabbitMQBinding:
 		dst.TypeMeta = metav1.TypeMeta{
 			APIVersion: GroupVersion.String(),
@@ -263,6 +335,15 @@ func (dst *GenericBinding) Duckify(srcRaw runtime.Object) error {
 		dst.TypeMeta = metav1.TypeMeta{
 			APIVersion: GroupVersion.String(),
 			Kind:       ResourceKindSolrBinding,
+		}
+		dst.ObjectMeta = src.ObjectMeta
+		dst.Spec.SourceRef = src.Spec.SourceRef
+		dst.Status = src.Status
+		return nil
+	case *WeaviateBinding:
+		dst.TypeMeta = metav1.TypeMeta{
+			APIVersion: GroupVersion.String(),
+			Kind:       ResourceKindWeaviateBinding,
 		}
 		dst.ObjectMeta = src.ObjectMeta
 		dst.Spec.SourceRef = src.Spec.SourceRef
