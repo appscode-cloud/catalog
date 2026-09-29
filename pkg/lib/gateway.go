@@ -160,4 +160,5 @@ func GetGatewayServiceType(ctx context.Context, kc client.Client, gwc *gwv1.Gate
 		}
 	}
 	return egv1a1.ServiceTypeLoadBalancer, nil
+
 }
